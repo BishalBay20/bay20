@@ -26,7 +26,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
@@ -367,6 +367,108 @@ section{padding-block:clamp(72px,9vw,120px)}
 @media (max-width:980px){.footer .cols{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.footer .cols{grid-template-columns:1fr}}
 
+
+/* =========================================================
+   AI SERVICES & AUTOMATION (chat + robot with floating services)
+   ========================================================= */
+.ai{background:var(--mist);position:relative;overflow:hidden}
+.ai .duo{display:grid;grid-template-columns:.95fr 1.05fr;grid-template-rows:800px;gap:20px;align-items:stretch}
+.apanel{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.4vw,28px)}
+/* left: intro + chat */
+.chatcol{display:flex;flex-direction:column;gap:18px;min-height:0;overflow:hidden}
+.chatcol .intro h3{font-size:clamp(22px,2vw,28px);font-weight:600;margin-top:10px}
+.chatcol .intro p{color:var(--slate);margin:10px 0 0;font-size:14.5px;max-width:52ch}
+.chatcol .pills{display:flex;flex-wrap:wrap;gap:8px}
+.chatcol .pills .pill{background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+.cpanel{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden;border:1px solid var(--line);border-radius:var(--r-md);background:#fff}
+.cpanel .hd{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.cpanel .hd .av{width:40px;height:40px;border-radius:50%;background:var(--crimson);display:grid;place-items:center;flex:none}
+.cpanel .hd .av svg{width:22px;height:22px}
+.cpanel .hd b{display:block;font-family:var(--fd);font-size:15px;font-weight:600}
+.cpanel .hd small{color:var(--slate);font-size:12.5px;display:flex;align-items:center;gap:6px}
+.cpanel .hd small::before{content:"";width:7px;height:7px;border-radius:50%;background:#2DBE6C}
+.cpanel .hd .ctl{margin-left:auto;display:flex;gap:4px}
+.cpanel .hd .ctl button{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;color:var(--slate);transition:.2s}
+.cpanel .hd .ctl button:hover{background:var(--paper);color:var(--ink)}
+.cpanel .hd .ctl svg{width:15px;height:15px}
+.cpanel .lab{text-align:center;font-size:12px;color:var(--slate);padding:10px 0 2px}
+.cpanel .msgs{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:9px;padding:8px 14px;justify-content:flex-end;mask-image:linear-gradient(to bottom,transparent,#000 22px)}
+.cmsg{max-width:86%;padding:9px 12px;border-radius:14px;font-size:13.5px;line-height:1.45;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;position:relative}
+.cmsg.in{opacity:1;transform:none}
+.cmsg.u{align-self:flex-end;background:var(--crimson);color:#fff;border-bottom-right-radius:4px}
+.cmsg.b{align-self:flex-start;background:var(--mist);color:var(--ink);border-bottom-left-radius:4px}
+.cmsg .src{display:block;font-family:var(--fm);font-size:10px;color:var(--steel);letter-spacing:.04em;margin-top:5px}
+.cmsg .ts{display:flex;justify-content:flex-end;gap:5px;align-items:center;font-size:10px;margin-top:4px;color:var(--steel)}
+.cmsg.u .ts{color:rgba(255,255,255,.75)}
+.cmsg .ts svg{width:12px;height:12px}
+.cmsg .cur{display:inline-block;width:1.5px;height:1em;background:var(--ink);vertical-align:-2px;margin-left:2px;animation:caret .8s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.cpanel .scn{display:flex;gap:6px;flex-wrap:wrap;padding:8px 14px 10px}
+.cpanel .scn button{font-size:11.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--slate);transition:.2s}
+.cpanel .scn button:hover{border-color:var(--ink);color:var(--ink)}
+.cpanel .scn button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cpanel .inp{border-top:1px solid var(--line);padding:12px 14px;display:flex;gap:10px;align-items:center}
+.cpanel .inp div{flex:1;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:13.5px;color:var(--steel);background:var(--paper)}
+.cpanel .inp button{width:40px;height:40px;border-radius:50%;background:var(--crimson);color:#fff;display:grid;place-items:center;flex:none}
+.cpanel .inp button svg{width:15px;height:15px}
+/* right: robot stage with floating service cards */
+.bot-stage{position:relative;display:grid;place-items:center;min-height:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.bot-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(14,15,20,.08) 1px,transparent 1px);background-size:16px 16px;mask-image:radial-gradient(60% 60% at 50% 50%,#000,transparent)}
+.bot-stage .glow{position:absolute;width:52%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(212,32,39,.16),rgba(220,231,241,.6) 55%,transparent 72%);left:50%;top:50%;translate:-50% -52%}
+.bot-stage .halo{position:absolute;width:72%;aspect-ratio:1;border-radius:50%;border:1px dashed var(--line);left:50%;top:50%;translate:-50% -50%;animation:spin 80s linear infinite}
+.bot-stage .halo::before{content:"";position:absolute;inset:18%;border-radius:50%;border:1px dashed var(--line)}
+.bot-stage .online{position:absolute;top:16px;left:50%;translate:-50% 0;font-family:var(--fm);font-size:10.5px;letter-spacing:.12em;display:inline-flex;align-items:center;gap:6px;color:var(--slate);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;z-index:2}
+.bot-stage .online i{width:8px;height:8px;border-radius:50%;background:#2DBE6C;box-shadow:0 0 0 4px rgba(45,190,108,.18)}
+.bot-stage .bot{position:relative;width:min(46%,250px);animation:float 5s ease-in-out infinite;z-index:1}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.bot-stage .shadow{position:absolute;left:50%;top:calc(50% + 150px);translate:-50% 0;width:34%;height:14px;border-radius:50%;background:rgba(14,15,20,.12);filter:blur(6px);animation:shade 5s ease-in-out infinite}
+@keyframes shade{0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(.85);opacity:.6}}
+.bot .eye{animation:blink 4.5s infinite;transform-origin:center;transform-box:fill-box}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}
+.fcard{position:absolute;z-index:3;width:min(44%,230px);background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:16px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:8px;animation:bob 6s ease-in-out infinite;transition:border-color .3s,transform .3s}
+.fcard:hover{border-color:var(--crimson)}
+.fcard .ic{width:38px;height:38px;border-radius:10px;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center}
+.fcard .ic.cool{background:var(--glacier);color:var(--glacier-deep)}
+.fcard .ic svg{width:18px;height:18px}
+.fcard h4{font-size:15px;font-weight:600}
+.fcard p{margin:0;color:var(--slate);font-size:12.5px;line-height:1.45}
+.fcard .meta{display:flex;flex-wrap:wrap;gap:5px}
+.fcard .meta .pill{font-size:11px;padding:4px 9px}
+.fcard .n{position:absolute;top:14px;right:14px;font-family:var(--fm);font-size:10.5px;color:var(--steel)}
+.fcard.f1{left:18px;top:60px}
+.fcard.f2{right:18px;top:92px;animation-delay:-1.5s}
+.fcard.f3{left:18px;bottom:60px;animation-delay:-3s}
+.fcard.f4{right:18px;bottom:28px;animation-delay:-4.5s}
+@keyframes bob{0%,100%{margin-top:0}50%{margin-top:-8px}}
+@media (max-width:1100px){.ai .duo{grid-template-columns:1fr;grid-template-rows:auto}.chatcol{overflow:visible}.bot-stage{min-height:620px}.cpanel{flex:none;height:480px}}
+@media (max-width:640px){
+  .bot-stage{display:block;min-height:0;padding:20px 16px 16px}
+  .bot-stage .glow,.bot-stage .halo,.bot-stage .shadow{display:none}
+  .bot-stage .online{position:static;translate:none;margin:0 auto 10px;width:max-content;display:flex}
+  .bot-stage .bot{width:min(60%,220px);margin:0 auto 16px;display:block}
+  .fcard,.fcard.f1,.fcard.f2,.fcard.f3,.fcard.f4{position:relative;inset:auto;width:auto;animation:none;margin-top:10px}
+  .cpanel{height:440px}
+}
+
+/* automation flow strip */
+.flow{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.6vw,30px);display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.flow .lbl{max-width:220px}
+.flow .lbl b{display:block;font-family:var(--fd);font-size:18px;font-weight:600;margin-bottom:4px}
+.flow .lbl span{font-size:13.5px;color:var(--slate)}
+.flow .nodes{display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:0;position:relative}
+.flow .nodes::before{content:"";position:absolute;left:10%;right:10%;top:26px;height:2px;background:var(--line)}
+.flow .nodes::after{content:"";position:absolute;left:10%;top:25px;width:10px;height:4px;border-radius:2px;background:var(--crimson);animation:pulse 3.2s linear infinite}
+@keyframes pulse{0%{left:10%;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:calc(90% - 10px);opacity:0}}
+.node{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;position:relative}
+.node .ic{width:52px;height:52px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:.3s}
+.node:hover .ic{background:var(--ink);color:#fff;border-color:var(--ink)}
+.node .ic svg{width:22px;height:22px}
+.node b{font-size:13.5px;font-weight:600}
+.node small{font-size:11.5px;color:var(--steel);display:block;margin-top:-6px}
+.node.hot .ic{background:var(--crimson);color:#fff;border-color:var(--crimson)}
+@media (max-width:980px){.flow{grid-template-columns:1fr}.flow .lbl{max-width:none}}
+@media (max-width:640px){.flow .nodes{grid-template-columns:repeat(2,1fr);gap:18px}.flow .nodes::before,.flow .nodes::after{display:none}}
+
 /* Floating helpers */
 .float{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
 .float a,.float button{height:48px;border-radius:999px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:10px;padding:0 18px 0 14px;font-weight:600;font-size:14px;box-shadow:var(--shadow-lg);border:1px solid var(--graphite-2);transition:transform .2s}
@@ -420,7 +522,7 @@ section{padding-block:clamp(72px,9vw,120px)}
     <div class="wrap">
       <div><h4>Ecommerce CMS</h4><ul><li><a href="#">Shopware</a></li><li><a href="#">PrestaShop</a></li><li><a href="#">WooCommerce</a></li><li><a href="#">BigCommerce</a></li><li><a href="#">Shopify</a></li><li><a href="#">Squarespace</a></li><li><a href="#">Wix · Volusion · 3DCart</a></li></ul></div>
       <div><h4>Magento</h4><ul><li><a href="#">Magento 2 Development</a></li><li><a href="#">Magento Cloud</a></li><li><a href="#">Custom Design</a></li><li><a href="#">Support &amp; Maintenance</a></li><li><a href="#">Migration M1 → M2</a></li><li><a href="#">Speed Optimization</a></li><li><a href="#">Security Patches</a></li></ul></div>
-      <div><h4>CRM · CMS · Mobile</h4><ul><li><a href="#">Salesforce</a></li><li><a href="#">HubSpot</a></li><li><a href="#">WordPress / Typo3 / Drupal</a></li><li><a href="#">Android &amp; Flutter apps</a></li><li><a href="#">Shopify &amp; BigCommerce apps</a></li><li><a href="#">PWA development</a></li></ul></div>
+      <div><h4>CRM · CMS · Mobile</h4><ul><li><a href="#">Salesforce</a></li><li><a href="#">HubSpot</a></li><li><a href="#">WordPress / Typo3 / Drupal</a></li><li><a href="#">Android &amp; Flutter apps</a></li><li><a href="#">Shopify &amp; BigCommerce apps</a></li><li><a href="#">PWA development</a></li><li><a href="#ai">AI &amp; automation</a></li></ul></div>
       <div class="feature"><div><span class="pill ghost">Featured service</span><h3 style="font-size:20px;margin:12px 0 8px">Magento speed optimisation</h3><p>Measurable Core Web Vitals gains on Magento 2 stores, delivered as a fixed-scope package.</p></div><a class="btn btn-light" href="#">See packages</a></div>
     </div>
   </div>
@@ -445,6 +547,7 @@ section{padding-block:clamp(72px,9vw,120px)}
       <a href="#services" data-close>SEO Packages</a>
       <a href="#capabilities" data-close>Capabilities</a>
       <div class="sub"><a href="#">Shopware</a><a href="#">Magento 2</a><a href="#">Shopify</a><a href="#">BigCommerce</a><a href="#">WooCommerce</a><a href="#">Salesforce · HubSpot</a></div>
+      <a href="#ai" data-close>AI &amp; Automation</a>
       <a href="#why" data-close>Hire Us</a>
       <a href="#blog" data-close>Blog</a>
       <a href="#contact" data-close>Contact</a>
@@ -615,6 +718,92 @@ section{padding-block:clamp(72px,9vw,120px)}
   </div>
 </section>
 
+<!-- ===================== AI SERVICES & AUTOMATION ===================== -->
+<section class="ai" id="ai" aria-labelledby="ai-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">AI services &amp; automation</span>
+        <h2 id="ai-title" class="reveal" data-delay="1">AI that <span class="accent">suggests, automates</span> and reports. Humans decide.</h2>
+      </div>
+      <div class="right reveal" data-delay="2">
+        <p class="lede">We build practical AI into the stores and CRMs we ship: assistants that answer from your real data, agents that handle repetitive work, and automations that connect the tools your team already uses.</p>
+        <a class="link" href="#contact">Talk about an AI project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="duo">
+      <!-- Left: assistant intro + chat -->
+      <div class="apanel chatcol reveal">
+        <div class="intro">
+          <span class="eyebrow">AI assistants &amp; agents</span>
+          <h3>An assistant that knows your catalogue, policies and opening hours.</h3>
+          <p>Trained only on content you approve. Answers customer questions on your store, WhatsApp or Instagram, hands over to a human when it should, and logs every conversation to your CRM.</p>
+        </div>
+        <div class="cpanel" aria-label="Example assistant conversation">
+          <div class="hd">
+            <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 13h.01M15 13h.01M9 17h6"/></svg></span>
+            <div><b>Store assistant</b><small id="ai-status">Online · answers from approved data</small></div>
+            <div class="ctl"><button id="ai-pause" aria-label="Pause conversation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5v14M15 5v14"/></svg></button><button id="ai-next" aria-label="Next example"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          </div>
+          <div class="lab" id="ai-lab">Online store · Example 1 of 3</div>
+          <div class="msgs" id="ai-msgs"></div>
+          <div class="scn" id="ai-scn" role="group" aria-label="Choose an example"><button class="on" data-s="0">Online store</button><button data-s="1">Hotel booking</button><button data-s="2">B2B wholesale</button></div>
+          <div class="inp"><div>Type a message…</div><button aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div>
+        </div>
+        <div class="pills"><span class="pill">Web chat</span><span class="pill">WhatsApp</span><span class="pill">Instagram</span><span class="pill">SMS</span><span class="pill">Human handover</span></div>
+      </div>
+
+      <!-- Right: robot with floating services -->
+      <div class="bot-stage reveal" data-delay="1">
+        <span class="online"><i></i>ONLINE</span>
+        <div class="glow"></div><div class="halo"></div>
+        <svg class="bot" viewBox="0 0 300 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="bw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E6E6E1"/></linearGradient>
+            <linearGradient id="bk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2A2D36"/><stop offset="1" stop-color="#0E0F14"/></linearGradient>
+            <linearGradient id="vis" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A1C23"/><stop offset="1" stop-color="#0E0F14"/></linearGradient>
+            <radialGradient id="eye" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFB3B6"/><stop offset=".45" stop-color="#D42027"/><stop offset="1" stop-color="#7A0E13"/></radialGradient>
+          </defs>
+          <rect x="146" y="22" width="8" height="34" rx="4" fill="#C7CBD4"/>
+          <circle cx="150" cy="18" r="10" fill="#D42027"/><circle cx="146" cy="14" r="3" fill="#FF8A8E"/>
+          <rect x="60" y="56" width="180" height="128" rx="60" fill="url(#bw)" stroke="#D9D9D4" stroke-width="2"/>
+          <rect x="40" y="96" width="24" height="52" rx="12" fill="url(#bk)"/><rect x="236" y="96" width="24" height="52" rx="12" fill="url(#bk)"/>
+          <rect x="78" y="76" width="144" height="86" rx="40" fill="url(#vis)"/>
+          <ellipse class="eye" cx="122" cy="118" rx="18" ry="22" fill="url(#eye)"/><ellipse class="eye" cx="178" cy="118" rx="18" ry="22" fill="url(#eye)"/>
+          <circle cx="114" cy="108" r="6" fill="#fff" opacity=".9"/><circle cx="170" cy="108" r="6" fill="#fff" opacity=".9"/>
+          <path d="M132 146 Q150 158 168 146" stroke="#FF8A8E" stroke-width="4" stroke-linecap="round"/>
+          <rect x="132" y="184" width="36" height="16" rx="6" fill="#C7CBD4"/>
+          <path d="M92 200h116a22 22 0 0 1 22 22v62a40 40 0 0 1-40 40H110a40 40 0 0 1-40-40v-62a22 22 0 0 1 22-22Z" fill="url(#bw)" stroke="#D9D9D4" stroke-width="2"/>
+          <circle cx="150" cy="248" r="22" fill="url(#bk)"/><circle cx="150" cy="248" r="11" fill="#D42027"/><circle cx="146" cy="244" r="3" fill="#FF8A8E"/>
+          <path d="M72 212c-22 10-36 40-30 72" stroke="url(#bk)" stroke-width="18" stroke-linecap="round"/><circle cx="42" cy="286" r="14" fill="#E6E6E1" stroke="#D9D9D4" stroke-width="2"/>
+          <path d="M228 212c22 10 36 40 30 72" stroke="url(#bk)" stroke-width="18" stroke-linecap="round"/><circle cx="258" cy="286" r="14" fill="#E6E6E1" stroke="#D9D9D4" stroke-width="2"/>
+          <rect x="104" y="318" width="28" height="26" rx="8" fill="url(#bk)"/><rect x="168" y="318" width="28" height="26" rx="8" fill="url(#bk)"/>
+          <rect x="94" y="338" width="48" height="16" rx="8" fill="#E6E6E1" stroke="#D9D9D4" stroke-width="2"/><rect x="158" y="338" width="48" height="16" rx="8" fill="#E6E6E1" stroke="#D9D9D4" stroke-width="2"/>
+        </svg>
+        <div class="shadow"></div>
+
+        <a class="fcard f1" href="#"><span class="n">01</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4L12 3ZM5 17l.9 2.1L8 20l-2.1.9L5 23l-.9-2.1L2 20l2.1-.9L5 17ZM19 15l.7 1.6 1.6.7-1.6.7L19 19.6l-.7-1.6-1.6-.7 1.6-.7.7-1.6Z"/></svg></span><h4>AI chatbots &amp; agents</h4><p>Customer-facing assistants and back-office agents built on your data, with a human in the loop.</p><div class="meta"><span class="pill red">Agents</span><span class="pill line">RAG</span></div></a>
+        <a class="fcard f2" href="#"><span class="n">02</span><span class="ic cool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span><h4>Workflow automation</h4><p>Zapier, Make and custom integrations that move orders, leads and tickets between your tools.</p><div class="meta"><span class="pill cool">Zapier</span><span class="pill cool">Make</span></div></a>
+        <a class="fcard f3" href="#"><span class="n">03</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><h4>Vibe coding services</h4><p>AI-assisted development with senior review. Prototypes in days, production code to our usual standard.</p><div class="meta"><span class="pill red">AI-assisted dev</span></div></a>
+        <a class="fcard f4" href="#"><span class="n">04</span><span class="ic cool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><h4>Data &amp; analytics</h4><p>Tableau dashboards, forecasting and reporting pipelines so decisions are made on numbers.</p><div class="meta"><span class="pill cool">Tableau</span><span class="pill line">Reporting</span></div></a>
+      </div>
+    </div>
+
+    <!-- Automation flow -->
+    <div class="flow reveal" aria-label="Example automation flow">
+      <div class="lbl"><b>A typical automation we set up</b><span>Every new order triggers the whole chain. No one re-types anything.</span></div>
+      <div class="nodes">
+        <div class="node hot"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></span><b>New order</b><small>Magento · Shopware · Shopify</small></div>
+        <div class="node"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span><b>Zapier / Make</b><small>Route &amp; enrich</small></div>
+        <div class="node"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><b>CRM updated</b><small>Salesforce · HubSpot</small></div>
+        <div class="node"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 13h.01M15 13h.01M9 17h6"/></svg></span><b>AI agent</b><small>Drafts reply, flags risk</small></div>
+        <div class="node"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><b>Dashboard</b><small>Tableau · live</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== WHY / ABOUT ===================== -->
 <section class="why" id="why" aria-labelledby="why-title">
   <div class="wrap">
@@ -738,7 +927,7 @@ section{padding-block:clamp(72px,9vw,120px)}
       </div>
       <div>
         <h4>Company</h4>
-        <ul><li><a href="#">About us</a></li><li><a href="#">SEO packages</a></li><li><a href="#">Hire developers</a></li><li><a href="#">Blog</a></li><li><a href="#">Deutsch (DE)</a></li></ul>
+        <ul><li><a href="#">About us</a></li><li><a href="#">SEO packages</a></li><li><a href="#ai">AI &amp; automation</a></li><li><a href="#">Hire developers</a></li><li><a href="#">Blog</a></li><li><a href="#">Deutsch (DE)</a></li></ul>
       </div>
       <div class="contact">
         <h4>Contact</h4>
@@ -856,6 +1045,44 @@ section{padding-block:clamp(72px,9vw,120px)}
       wins.forEach((w,i)=>{const d=(i+1)*4; w.style.translate=`${x*d}px ${y*d}px`;});
     });
     stage.addEventListener('pointerleave',()=>wins.forEach(w=>w.style.translate=''));
+  }
+
+  /* AI chat demo: scripted conversations with sources, typewriter replies, pause/next/scenario pills */
+  const chatBox=$('#ai-msgs');
+  if(chatBox){
+    const tick='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m2 12 5 5L17 7M9 17l10-10"/></svg>';
+    const scripts=[
+      {lab:'Online store',m:[['u','Do you have the linen shirt in medium?'],['b','Yes, 4 left in medium in sand and navy. Want me to add one to your cart?','Source: live inventory'],['u','Navy please. When will it arrive?'],['b','Added. Orders before 2 pm ship today, so delivery is Thursday.','Source: shipping policy']]},
+      {lab:'Hotel booking',m:[['u','Is a late check-in possible on Friday?'],['b','Yes. Reception is open 24 hours, and the Garden Suite is free that night.','Source: booking calendar'],['u','Can you book it for two adults?'],['b','I can hold it for 20 minutes while a colleague confirms your details.','Handover: reservations team']]},
+      {lab:'B2B wholesale',m:[['u','What is the wholesale price for 500 units?'],['b','Tier 3 pricing applies: 18% below list. I have sent the quote to your email.','Source: price list · CRM'],['u','Payment terms?'],['b','Net 30 for approved accounts. Yours is approved, so you are all set.','Source: Salesforce account']]},
+    ];
+    const status=$('#ai-status'), lab=$('#ai-lab'), scn=$$('#ai-scn button'); const IDLE='Online · answers from approved data';
+    let cur=0, paused=false, timers=[], raf=null, gen=0;
+    const now=()=>{const d=new Date(); return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0');};
+    const clearTimers=()=>{timers.forEach(clearTimeout); timers=[]; if(raf) cancelAnimationFrame(raf);};
+    const wait=ms=>new Promise(r=>timers.push(setTimeout(r,ms)));
+    const bubble=(who)=>{const m=document.createElement('div'); m.className='cmsg '+who; const t=document.createElement('span'); t.className='txt'; m.appendChild(t); chatBox.appendChild(m); requestAnimationFrame(()=>m.classList.add('in')); return m;};
+    const finish=(m,who,src)=>{ if(src){const s=document.createElement('span'); s.className='src'; s.textContent=src; m.appendChild(s);} const ts=document.createElement('span'); ts.className='ts'; ts.innerHTML=now()+(who==='u'?tick:''); m.appendChild(ts); };
+    const typeInto=(m,text,g)=>new Promise(res=>{const t=$('.txt',m); const c=document.createElement('i'); c.className='cur'; m.appendChild(c); let i=0; const step=()=>{ if(g!==gen) return; if(paused){raf=requestAnimationFrame(step); return;} i=Math.min(text.length,i+1+(text.length>60?1:0)); t.textContent=text.slice(0,i); if(i<text.length){ timers.push(setTimeout(step,22)); } else { c.remove(); res(); } }; step();});
+    const run=async(i)=>{
+      clearTimers(); cur=i; const g=++gen;
+      scn.forEach((b,k)=>b.classList.toggle('on',k===i));
+      const old=[...chatBox.children]; old.forEach(m=>m.classList.remove('in')); await wait(350); if(g!==gen) return; old.forEach(m=>m.remove());
+      lab.textContent=`${scripts[i].lab} · Example ${i+1} of ${scripts.length}`;
+      for(const [who,text,src] of scripts[i].m){
+        while(paused){ await wait(200); if(g!==gen) return; }
+        if(who==='u'){ status.textContent='Reading…'; const m=bubble('u'); $('.txt',m).textContent=text; finish(m,'u'); await wait(1100); }
+        else { status.textContent='Replying…'; const m=bubble('b'); await wait(450); if(g!==gen) return; await typeInto(m,text,g); if(g!==gen) return; finish(m,'b',src); await wait(1300); }
+        if(g!==gen) return;
+      }
+      status.textContent=IDLE; await wait(3200); if(g!==gen) return;
+      run((cur+1)%scripts.length);
+    };
+    scn.forEach(b=>b.addEventListener('click',()=>{paused=false; run(+b.dataset.s);}));
+    $('#ai-next').addEventListener('click',()=>{paused=false; run((cur+1)%scripts.length);});
+    $('#ai-pause').addEventListener('click',e=>{paused=!paused; e.currentTarget.innerHTML=paused?'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5v14M15 5v14"/></svg>'; status.textContent=paused?'Paused':'Replying…';});
+    const aio=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){run(0); aio.disconnect();}}),{threshold:.3});
+    aio.observe(chatBox);
   }
 
   /* Footer padding follows the overlapping CTA box */
