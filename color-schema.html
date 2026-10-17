@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bay20 · Colour Schema & Style Tile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ── Brand core (from the Bay20 logo) ── */
+    --crimson:#D42027;        /* primary accent  */
+    --crimson-deep:#A8141B;   /* hover / pressed */
+    --crimson-soft:#FBE9EA;   /* tint for chips & callouts */
+    --ink:#0E0F14;            /* near-black, dark surfaces */
+    --graphite:#1A1C23;       /* elevated dark cards */
+    --graphite-2:#262932;     /* borders on dark */
+
+    /* ── Neutrals (warm-neutral, not cream) ── */
+    --paper:#F7F7F5;          /* page background */
+    --mist:#EEEEEA;           /* alternate section */
+    --line:#E1E1DB;           /* hairlines */
+    --slate:#5F6470;          /* secondary text */
+    --steel:#9AA0AB;          /* tertiary / labels */
+
+    /* ── Secondary (cool counterweight to red) ── */
+    --glacier:#DCE7F1;        /* tech / platform tints */
+    --glacier-deep:#2F4A68;   /* tech text on glacier */
+
+    --radius:18px;
+    --font-display:'Sora',system-ui,sans-serif;
+    --font-body:'Inter',system-ui,sans-serif;
+    --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.55}
+  .wrap{max-width:1180px;margin:0 auto;padding:56px 24px 96px}
+  h1{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);line-height:1.05;margin:0 0 8px;letter-spacing:-.02em}
+  h2{font-family:var(--font-display);font-size:22px;margin:56px 0 18px;letter-spacing:-.01em}
+  .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson)}
+  .lede{color:var(--slate);max-width:720px;font-size:17px}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  .sw{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
+  .sw .chip{height:96px}
+  .sw .meta{padding:12px 14px;font-size:13px}
+  .sw .meta b{display:block;font-family:var(--font-display);font-size:14px;margin-bottom:2px}
+  .sw .meta code{font-family:var(--font-mono);color:var(--slate);font-size:12px}
+  .sw .meta small{display:block;color:var(--steel);margin-top:4px}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:var(--font-body)}
+  .btn-primary{background:var(--crimson);color:#fff}
+  .btn-primary:hover{background:var(--crimson-deep)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .chipline{display:flex;gap:8px;flex-wrap:wrap}
+  .pill{font-size:13px;padding:6px 12px;border-radius:999px;font-weight:500}
+  .pill.red{background:var(--crimson-soft);color:var(--crimson-deep)}
+  .pill.cool{background:var(--glacier);color:var(--glacier-deep)}
+  .pill.dark{background:var(--graphite);color:#fff}
+  .pill.line{border:1px solid var(--line);color:var(--slate)}
+  .type .t{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .type .t small{font-family:var(--font-mono);color:var(--steel);font-size:12px}
+  .dark{background:var(--ink);color:#fff;border-radius:var(--radius);padding:32px;margin-top:14px}
+  .dark .eyebrow{color:#F08A8E}
+  .dark .lede{color:#B9BDC7}
+  .dark .card{background:var(--graphite);border:1px solid var(--graphite-2);border-radius:14px;padding:18px;color:#fff}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:760px){.pair{grid-template-columns:1fr}.type .t{grid-template-columns:1fr}}
+  .contrast{font-family:var(--font-mono);font-size:12px;color:var(--steel)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Bay20 · Visual direction 01</div>
+  <h1>Crimson &amp; Ink.</h1>
+  <p class="lede">A modern palette built from the existing Bay20 logo (crimson + black) and deliberately moved away from the warm-cream, terracotta look of the reference site. Red stays the single call-to-action colour, near-black carries the hero and “proof” sections, and a cool glacier tint is reserved for technology and platform content so the page never reads as all-red.</p>
+
+  <h2>Brand core</h2>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:var(--crimson)"></div><div class="meta"><b>Crimson</b><code>#D42027</code><small>Primary accent · CTAs · highlights in headlines</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--crimson-deep)"></div><div class="meta"><b>Crimson Deep</b><code>#A8141B</code><small>Hover, pressed, text-on-tint</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--crimson-soft)"></div><div class="meta"><b>Crimson Soft</b><code>#FBE9EA</code><small>Tags, callouts, step numbers</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--ink)"></div><div class="meta"><b>Ink</b><code>#0E0F14</code><small>Hero, dark sections, body text</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--graphite)"></div><div class="meta"><b>Graphite</b><code>#1A1C23</code><small>Cards on dark surfaces</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--graphite-2)"></div><div class="meta"><b>Graphite 2</b><code>#262932</code><small>Borders &amp; dividers on dark</small></div></div>
+  </div>
+
+  <h2>Neutrals</h2>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:var(--paper)"></div><div class="meta"><b>Paper</b><code>#F7F7F5</code><small>Page background</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--mist)"></div><div class="meta"><b>Mist</b><code>#EEEEEA</code><small>Alternate section band</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--line)"></div><div class="meta"><b>Line</b><code>#E1E1DB</code><small>Hairlines &amp; card borders</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--slate)"></div><div class="meta"><b>Slate</b><code>#5F6470</code><small>Secondary text (AA on Paper)</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--steel)"></div><div class="meta"><b>Steel</b><code>#9AA0AB</code><small>Labels, meta, placeholders</small></div></div>
+  </div>
+
+  <h2>Secondary · cool counterweight</h2>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:var(--glacier)"></div><div class="meta"><b>Glacier</b><code>#DCE7F1</code><small>Platform / technology chips</small></div></div>
+    <div class="sw"><div class="chip" style="background:var(--glacier-deep)"></div><div class="meta"><b>Glacier Deep</b><code>#2F4A68</code><small>Text on glacier, tech icons</small></div></div>
+  </div>
+
+  <h2>Typography</h2>
+  <div class="type">
+    <div class="t"><small>Display · Sora 600</small><div style="font-family:var(--font-display);font-size:40px;font-weight:600;letter-spacing:-.02em;line-height:1.05">We create solutions for <span style="color:var(--crimson)">eCommerce</span>, CRM, Mobile and Web.</div></div>
+    <div class="t"><small>H2 · Sora 600 · 32px</small><div style="font-family:var(--font-display);font-size:32px;font-weight:600;letter-spacing:-.015em">Our featured projects</div></div>
+    <div class="t"><small>Body · Inter 400 · 17px</small><div style="font-size:17px;color:var(--slate)">We deliver conversion focused technology solutions to ambitious businesses. We follow agile by heart.</div></div>
+    <div class="t"><small>Eyebrow · JetBrains Mono</small><div class="eyebrow">Ecommerce · CRM · Mobile · Web</div></div>
+  </div>
+
+  <h2>Components</h2>
+  <div class="row">
+    <button class="btn btn-primary">Let's Discuss →</button>
+    <button class="btn btn-dark">View projects</button>
+    <button class="btn btn-ghost">Read more</button>
+  </div>
+  <div class="chipline" style="margin-top:16px">
+    <span class="pill red">Magento 2</span><span class="pill cool">Shopware 6</span><span class="pill cool">BigCommerce</span><span class="pill cool">Shopify</span><span class="pill line">Salesforce</span><span class="pill dark">ISO 9001</span>
+  </div>
+
+  <h2>Dark surface</h2>
+  <div class="dark">
+    <div class="eyebrow">Why Bay20</div>
+    <p class="lede" style="margin:6px 0 18px">Fast turnaround time and proper quality checks on maintenance tasks.</p>
+    <div class="pair">
+      <div class="card"><b style="font-family:var(--font-display)">Listen</b><br><span style="color:#B9BDC7;font-size:14px">We understand your business needs to deliver the best suited solution.</span></div>
+      <div class="card"><b style="font-family:var(--font-display)">Develop</b><br><span style="color:#B9BDC7;font-size:14px">Coding standards by heart. Scalable, bug-free applications.</span></div>
+    </div>
+  </div>
+
+  <h2>Contrast notes</h2>
+  <p class="contrast">Ink on Paper 17.6:1 · Slate on Paper 5.6:1 · White on Crimson 5.5:1 · Crimson Deep on Crimson Soft 6.9:1 · Glacier Deep on Glacier 7.4:1 · all pass WCAG AA for body text.</p>
+</div>
+</body>
+</html>
