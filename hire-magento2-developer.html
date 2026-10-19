@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hire Magento 2 Developer · Bay20 Software</title>
+<meta name="description" content="Hire Magento 2 certified developers and designers from Bay20. Full-time, part-time or hourly engagement, 5+ years average experience, ISO 9001 process, complete post-project support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root{
+  --crimson:#D42027; --crimson-deep:#A8141B; --crimson-soft:#FBE9EA;
+  --ink:#0E0F14; --graphite:#1A1C23; --graphite-2:#262932;
+  --paper:#F7F7F5; --mist:#EEEEEA; --line:#E1E1DB; --slate:#5F6470; --steel:#9AA0AB;
+  --glacier:#DCE7F1; --glacier-deep:#2F4A68;
+  --white:#FFFFFF;
+  --r-lg:24px; --r-md:16px; --r-sm:10px;
+  --shadow-sm:0 1px 2px rgba(14,15,20,.06),0 8px 24px -12px rgba(14,15,20,.18);
+  --shadow-lg:0 30px 80px -30px rgba(14,15,20,.45);
+  --fd:'Sora',system-ui,sans-serif; --fb:'Inter',system-ui,sans-serif; --fm:'JetBrains Mono',ui-monospace,monospace;
+  --wrap:1240px; --gutter:clamp(20px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3,h4{font-family:var(--fd);letter-spacing:-.02em;line-height:1.08;margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.eyebrow{font-family:var(--fm);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.lede{color:var(--slate);font-size:clamp(16px,1.2vw,18px);max-width:60ch}
+.accent{color:var(--crimson)}
+section{padding-block:clamp(72px,9vw,120px)}
+.section-head{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;margin-bottom:clamp(36px,5vw,56px)}
+.section-head h2{font-size:clamp(32px,4vw,52px);margin-top:14px}
+.section-head .right{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+@media (max-width:860px){.section-head{grid-template-columns:1fr;gap:18px}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;line-height:1;border:1px solid transparent;transition:transform .2s ease,background .2s,border-color .2s,color .2s,box-shadow .2s;white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--crimson);color:#fff;box-shadow:0 10px 24px -12px rgba(212,32,39,.7)}
+.btn-primary:hover{background:var(--crimson-deep)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--graphite)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:var(--mist)}
+.btn-outline-light{border-color:rgba(255,255,255,.28);color:#fff}
+.btn-outline-light:hover{border-color:#fff}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border-bottom:1.5px solid var(--crimson);padding-bottom:2px}
+.link svg{width:14px;height:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:999px;line-height:1}
+.pill.red{background:var(--crimson-soft);color:var(--crimson-deep)}
+.pill.cool{background:var(--glacier);color:var(--glacier-deep)}
+.pill.line{border:1px solid var(--line);color:var(--slate)}
+.pill.ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.14)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}.reveal[data-delay="5"]{transition-delay:.4s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.001s!important}}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.topbar{background:var(--ink);color:#C7CBD4;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:16px}
+.topbar a:hover{color:#fff}
+.topbar .left,.topbar .right{display:flex;gap:22px;align-items:center}
+.topbar .dot{width:4px;height:4px;border-radius:50%;background:var(--crimson);display:inline-block;margin-right:8px;vertical-align:middle}
+.lang{display:inline-flex;border:1px solid var(--graphite-2);border-radius:999px;overflow:hidden}
+.lang button{padding:4px 10px;font-size:12px;font-weight:600;color:#C7CBD4}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--ink)}
+@media (max-width:760px){.topbar .left span:not(:first-child),.topbar .socials{display:none}}
+
+.header{position:sticky;top:0;z-index:50;background:rgba(247,247,245,.85);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.header.scrolled{border-color:var(--line);box-shadow:0 10px 30px -20px rgba(14,15,20,.25)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand img{height:40px;width:auto}
+.nav{display:flex;gap:4px;align-items:center}
+.nav>a,.nav>button{padding:10px 14px;border-radius:999px;font-weight:500;font-size:14.5px;color:var(--ink);display:inline-flex;align-items:center;gap:6px;transition:background .2s}
+.nav>a:hover,.nav>button:hover{background:var(--mist)}
+.nav>a.active{color:var(--crimson)}
+.nav svg{width:12px;height:12px;opacity:.6}
+.header .cta{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);align-items:center;justify-content:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+@media (max-width:1080px){.nav{display:none}.mega{display:none}.burger{display:inline-flex}.header .cta .btn-ghost{display:none}}
+@media (max-width:560px){.header .cta .btn-primary{display:none}}
+
+/* Mega menu */
+.mega{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(14,15,20,.3);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s}
+.mega.open{opacity:1;visibility:visible;transform:none}
+.mega .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding-block:32px;height:auto}
+.mega h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);font-family:var(--fm);font-weight:500;margin-bottom:12px}
+.mega ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.mega li a{font-size:14.5px;color:var(--ink);display:inline-flex;gap:8px;align-items:center}
+.mega li a:hover{color:var(--crimson)}
+.mega .feature{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.mega .feature p{margin:0;color:#B9BDC7;font-size:14px}
+
+/* Mobile drawer */
+.drawer{position:fixed;inset:0;z-index:80;visibility:hidden}
+.drawer.open{visibility:visible}
+.drawer .scrim{position:absolute;inset:0;background:rgba(14,15,20,.5);opacity:0;transition:opacity .3s}
+.drawer.open .scrim{opacity:1}
+.drawer .panel{position:absolute;top:0;right:0;bottom:0;width:min(400px,88vw);background:var(--paper);padding:20px 22px 40px;overflow:auto;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.drawer.open .panel{transform:none}
+.drawer .panel header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.drawer nav a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--fd);font-size:20px;font-weight:600}
+.drawer .sub{display:grid;gap:6px;padding:10px 0 16px;border-bottom:1px solid var(--line)}
+.drawer .sub a{font-size:14.5px;color:var(--slate);padding:4px 0}
+.drawer .foot{margin-top:22px;display:grid;gap:12px}
+.xbtn{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:20px}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding-block:clamp(64px,8vw,110px) 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 50% at 80% 20%,rgba(212,32,39,.28),transparent 60%),
+  radial-gradient(40% 40% at 10% 90%,rgba(47,74,104,.35),transparent 60%);pointer-events:none}
+.hero .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(70% 70% at 50% 40%,#000,transparent);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,72px);font-weight:600;margin:20px 0 22px}
+.hero h1 .accent{color:#FF6B70}
+.hero .lede{color:#C7CBD4;max-width:54ch}
+.hero .eyebrow{color:#FF8A8E}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero .proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
+.hero .proof div{display:flex;flex-direction:column;gap:2px}
+.hero .proof b{font-family:var(--fd);font-size:26px;letter-spacing:-.02em}
+.hero .proof span{font-size:12.5px;color:#9AA0AB;letter-spacing:.06em;text-transform:uppercase;font-family:var(--fm)}
+
+/* Browser mockups */
+.stage{position:relative;height:clamp(420px,46vw,620px)}
+.win{position:absolute;border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow-lg),0 0 0 1px rgba(255,255,255,.08);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.win .bar{height:28px;background:#F1F1EE;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid #E6E6E1}
+.win .bar i{width:8px;height:8px;border-radius:50%;background:#D9D9D4}
+.win .bar i:nth-child(1){background:#F0665E}.win .bar i:nth-child(2){background:#F2BE4E}.win .bar i:nth-child(3){background:#5BC66A}
+.win .bar em{margin-left:auto;font-style:normal;font-family:var(--fm);font-size:10px;color:#9AA0AB}
+.win .view{position:relative;overflow:hidden;height:calc(100% - 28px)}
+.win .view img{width:100%;height:auto;will-change:transform}
+.win-a{width:48%;left:0;top:6%;height:76%;transform:rotate(-5deg);z-index:1}
+.win-b{width:62%;left:22%;top:0;height:92%;z-index:3}
+.win-c{width:44%;right:-2%;top:30%;height:66%;transform:rotate(5deg);z-index:4}
+.stage:hover .win-a{transform:rotate(-7deg) translateX(-10px)}
+.stage:hover .win-c{transform:rotate(7deg) translateX(10px)}
+.stage .tag{position:absolute;z-index:6;background:#fff;color:var(--ink);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow-sm)}
+.stage .tag i{width:8px;height:8px;border-radius:50%;background:#2DBE6C;display:inline-block}
+.stage .tag.t1{left:8%;bottom:12%}
+.stage .tag.t2{right:4%;top:22%}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr}.stage{height:min(78vw,520px);margin-top:10px}.stage .tag.t2{top:6%}}
+
+/* Steps strip */
+.steps{position:relative;margin-top:clamp(56px,7vw,96px);background:var(--graphite);border-top:1px solid var(--graphite-2)}
+.steps .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.step{padding:28px 26px 28px 0;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;border-right:1px solid var(--graphite-2);position:relative}
+.step:last-child{border-right:0}
+.step+.step{padding-left:26px}
+.step .ic{width:44px;height:44px;border-radius:12px;background:rgba(212,32,39,.14);display:grid;place-items:center;color:#FF8A8E}
+.step .ic svg{width:20px;height:20px}
+.step small{font-family:var(--fm);font-size:11px;letter-spacing:.14em;color:#9AA0AB;text-transform:uppercase}
+.step b{display:block;font-family:var(--fd);font-weight:600;font-size:17px;margin-top:4px;color:#fff}
+.step span.n{position:absolute;right:26px;top:22px;font-family:var(--fm);font-size:11px;color:#5F6470}
+@media (max-width:980px){.steps .wrap{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(3){padding-left:0}.step:nth-child(n+3){border-top:1px solid var(--graphite-2)}}
+@media (max-width:560px){.steps .wrap{grid-template-columns:1fr}.step{border-right:0!important;padding-left:0!important;border-top:1px solid var(--graphite-2)}.step:first-child{border-top:0}}
+
+/* =========================================================
+   SERVICES (editorial rows)
+   ========================================================= */
+.services .list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc{position:relative;display:grid;grid-template-columns:48px 1fr auto;gap:22px;align-items:center;padding:34px 28px 34px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;min-height:168px;background:var(--paper);transition:background .3s}
+.svc:hover{background:#fff}
+.svc .n{font-family:var(--fm);font-size:12px;color:var(--crimson);padding-left:22px}
+.svc h3{font-size:clamp(20px,1.8vw,26px);font-weight:600}
+.svc p{margin:8px 0 0;color:var(--slate);font-size:14.5px;max-width:46ch}
+.svc .meta{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.svc .go{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;background:#fff;transition:background .25s,color .25s,transform .25s}
+.svc .go svg{width:16px;height:16px}
+.svc:hover .go{background:var(--crimson);color:#fff;border-color:var(--crimson);transform:translateX(4px)}
+.svc .ghost{position:absolute;right:-40px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,var(--crimson-soft),transparent 70%);opacity:0;transition:opacity .4s}
+.svc:hover .ghost{opacity:1}
+@media (max-width:860px){.services .list{grid-template-columns:1fr}.svc{grid-template-columns:40px 1fr auto;padding-right:18px}}
+
+/* =========================================================
+   PROJECTS (bento)
+   ========================================================= */
+.projects{background:var(--mist)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(220px,auto);gap:16px}
+.proj{position:relative;border-radius:var(--r-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;isolation:isolate}
+.proj .shot{position:relative;flex:1;overflow:hidden;background:#F1F1EE;min-height:240px}
+.proj .shot img{position:absolute;inset:0 auto auto 0;width:100%;height:auto;min-height:100%;object-fit:cover;object-position:top;will-change:transform}
+.proj .shot::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(14,15,20,.35),transparent 30%)}
+.proj .hint{position:absolute;top:14px;right:14px;z-index:2;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.92);color:var(--ink);font-size:11.5px;font-weight:600;padding:6px 10px;border-radius:999px;opacity:0;transform:translateY(-4px);transition:.3s}
+.proj .hint svg{width:12px;height:12px}
+.proj:hover .hint{opacity:1;transform:none}
+@media (hover:none){.proj .hint{display:none}}
+.proj .shot::after{content:"";position:absolute;inset:auto 0 0 0;height:50%;background:linear-gradient(to top,rgba(14,15,20,.72),transparent)}
+.proj .cap{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.proj .cap h3{font-size:20px;font-weight:600}
+.proj .cap small{display:block;color:#C7CBD4;font-size:13px;margin-top:4px}
+.proj .cap .go{flex:none;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;opacity:0;transform:translateY(6px);transition:.3s}
+.proj:hover .cap .go{opacity:1;transform:none}
+.proj .cap .go svg{width:14px;height:14px}
+.proj .tags{position:absolute;top:14px;left:14px;z-index:2;display:flex;gap:6px}
+.proj .tags .pill{background:rgba(14,15,20,.72);border-color:transparent;backdrop-filter:blur(6px)}
+.p1{grid-column:span 7;grid-row:span 2}
+.p2{grid-column:span 5}
+.p3{grid-column:span 5}
+.p4{grid-column:span 4}
+.p5{grid-column:span 4}
+.p6{grid-column:span 4}
+.proj.cta{grid-column:span 4;background:var(--ink);color:#fff;padding:28px;justify-content:space-between}
+.proj.cta h3{font-size:26px}
+.proj.cta p{color:#B9BDC7;margin:10px 0 0;font-size:14.5px}
+@media (max-width:980px){.p1{grid-column:span 12}.p2,.p3{grid-column:span 6}.p4,.p5,.p6,.proj.cta{grid-column:span 6}}
+@media (max-width:600px){.bento>*{grid-column:span 12!important}}
+
+/* =========================================================
+   CAPABILITIES (tabs + orbit)
+   ========================================================= */
+.caps .layout{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+.tab{padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;color:var(--slate);border:1px solid transparent;transition:.2s}
+.tab:hover{color:var(--ink);background:var(--mist)}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.panel{display:none}
+.panel.active{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel h3{font-size:clamp(24px,2.4vw,34px);font-weight:600;margin-bottom:10px}
+.panel p{color:var(--slate);margin:0 0 18px;max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.chips a:hover{border-color:var(--ink);transform:translateY(-1px)}
+.chips a i{width:8px;height:8px;border-radius:50%;background:var(--glacier-deep);display:inline-block}
+.chips a.hot i{background:var(--crimson)}
+.orbit{position:relative;width:min(100%,520px);height:min(100%,520px);aspect-ratio:1/1;min-height:360px;margin-inline:auto}
+.orbit .ring{position:absolute;inset:0;border-radius:50%;border:1px dashed var(--line)}
+.orbit .ring.r2{inset:17%}
+.orbit .ring.r3{inset:34%}
+.orbit .core{position:absolute;inset:33%;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;box-shadow:var(--shadow-lg);padding:8%}
+.orbit .core b{font-family:var(--fd);font-size:clamp(11px,1.25vw,16px);line-height:1.2;font-weight:600;display:block}
+.orbit .core small{font-family:var(--fm);font-size:10px;letter-spacing:.14em;color:#FF8A8E;display:block;margin-bottom:6px}
+.sat{position:absolute;translate:-50% -50%;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:8px;white-space:nowrap;animation:bob 6s ease-in-out infinite}
+.sat i{width:9px;height:9px;border-radius:50%;display:inline-block;background:var(--glacier-deep)}
+.sat.red i{background:var(--crimson)}
+.sat:nth-child(odd){animation-delay:-3s}
+@keyframes bob{0%,100%{margin-top:0}50%{margin-top:-8px}}
+.orbit .spin{position:absolute;inset:0;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orbit .spin .sat{animation:unspin 60s linear infinite}
+.orbit .spin .sat span{display:inline-flex;align-items:center;gap:8px}
+@keyframes unspin{to{transform:rotate(-360deg)}}
+@media (max-width:980px){.caps .layout{grid-template-columns:1fr}.orbit{width:min(100% - 56px,420px);min-height:300px}.orbit .spin{inset:8%}.orbit>.sat{display:none}.sat{font-size:11.5px;padding:6px 10px}}
+
+/* =========================================================
+   WHY / ABOUT (dark)
+   ========================================================= */
+.why{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 100% 100%,rgba(212,32,39,.22),transparent 60%);pointer-events:none}
+.why .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.why .eyebrow{color:#FF8A8E}
+.why h2{font-size:clamp(32px,4vw,52px);margin:14px 0 18px}
+.why h2 .accent{color:#FF6B70}
+.why .lede{color:#B9BDC7}
+.why .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px;padding-top:28px;border-top:1px solid var(--graphite-2)}
+.why .stats b{font-family:var(--fd);font-size:clamp(30px,3.4vw,44px);letter-spacing:-.03em;display:block}
+.why .stats span{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0AB}
+.principles{display:grid;gap:12px}
+.pr{background:var(--graphite);border:1px solid var(--graphite-2);border-radius:var(--r-md);padding:20px 22px;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start;transition:border-color .3s,transform .3s}
+.pr:hover{border-color:rgba(212,32,39,.5);transform:translateX(4px)}
+.pr .ic{width:40px;height:40px;border-radius:10px;background:rgba(212,32,39,.14);color:#FF8A8E;display:grid;place-items:center}
+.pr .ic svg{width:18px;height:18px}
+.pr b{font-family:var(--fd);font-size:17px;display:block;margin-bottom:4px}
+.pr p{margin:0;color:#B9BDC7;font-size:14px}
+@media (max-width:900px){.why .wrap{grid-template-columns:1fr}}
+
+/* =========================================================
+   PARTNERS marquee
+   ========================================================= */
+.partners{padding-block:48px;border-bottom:1px solid var(--line);background:#fff}
+.partners .head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.partners .head p{margin:0;color:var(--slate);font-size:14.5px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee .track{display:flex;gap:18px;width:max-content;animation:scroll 38s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.logo-card{height:84px;min-width:190px;padding:0 26px;border:1px solid var(--line);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;gap:12px;background:var(--paper)}
+.logo-card img{max-height:46px;width:auto;max-width:140px;filter:grayscale(1) contrast(1.05);opacity:.75;transition:.3s}
+.logo-card:hover img{filter:none;opacity:1}
+.logo-card span{font-size:13px;color:var(--slate);font-weight:500}
+
+/* =========================================================
+   BLOG
+   ========================================================= */
+.blog .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.post{background:#fff;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.post:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.post .img{aspect-ratio:16/9;overflow:hidden;background:var(--mist)}
+.post .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.post:hover .img img{transform:scale(1.03)}
+.post .body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.post .meta{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--steel)}
+.post h3{font-size:19px;font-weight:600;line-height:1.3}
+.post p{margin:0;color:var(--slate);font-size:14.5px;flex:1}
+@media (max-width:900px){.blog .cards{grid-template-columns:1fr}}
+
+/* =========================================================
+   STORIES (video testimonials)
+   ========================================================= */
+.stories{background:var(--mist)}
+.stories .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.story{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--ink);color:#fff;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;isolation:isolate}
+.story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:.35;filter:saturate(.6);transition:opacity .4s,transform .8s;z-index:-1}
+.story:hover img{opacity:.5;transform:scale(1.04)}
+.story::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,15,20,.9),rgba(14,15,20,.2));z-index:-1}
+.story .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:64px;height:64px;border-radius:50%;background:#fff;color:var(--crimson);display:grid;place-items:center;box-shadow:var(--shadow-lg);transition:transform .3s}
+.story:hover .play{transform:translate(-50%,-60%) scale(1.08)}
+.story .play svg{width:22px;height:22px;margin-left:3px}
+.story small{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#FF8A8E}
+.story h3{font-size:20px;margin-top:6px}
+.story p{margin:6px 0 0;font-size:13.5px;color:#C7CBD4}
+@media (max-width:900px){.stories .cards{grid-template-columns:1fr}}
+
+/* =========================================================
+   CTA + FOOTER
+   ========================================================= */
+.cta-band{padding-block:0}
+.cta-band .box{background:var(--crimson);color:#fff;border-radius:var(--r-lg);padding:clamp(36px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;position:relative;overflow:hidden;transform:translateY(50%)}
+.cta-band .box::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.08)}
+.cta-band h2{font-size:clamp(28px,3.6vw,46px)}
+.cta-band p{color:rgba(255,255,255,.85);margin:10px 0 0}
+.cta-band .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;position:relative}
+@media (max-width:860px){.cta-band .box{grid-template-columns:1fr}.cta-band .actions{justify-content:flex-start}}
+.footer{background:var(--ink);color:#B9BDC7;padding:clamp(120px,14vw,180px) 0 32px}
+.footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:48px;border-bottom:1px solid var(--graphite-2)}
+.footer h4{color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--fm);font-weight:500;margin-bottom:16px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:14.5px}
+.footer a:hover{color:#fff}
+.footer .brand img{height:40px;filter:brightness(0) invert(1)}
+.footer .about{font-size:14.5px;max-width:40ch;margin:16px 0 20px}
+.footer .badges{display:flex;gap:12px;align-items:center}
+.footer .badges img{height:56px;width:auto;background:#fff;border-radius:10px;padding:6px}
+.footer .contact b{color:#fff;font-weight:600;display:block;font-size:15px}
+.footer .contact li{display:grid;gap:2px}
+.footer .contact li+li{margin-top:6px}
+.footer .bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;font-size:13px;flex-wrap:wrap}
+.footer .socials{display:flex;gap:8px}
+.footer .socials a{width:36px;height:36px;border-radius:10px;border:1px solid var(--graphite-2);display:grid;place-items:center;transition:.2s}
+.footer .socials a:hover{border-color:#fff;color:#fff}
+.footer .socials svg{width:16px;height:16px}
+@media (max-width:980px){.footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.footer .cols{grid-template-columns:1fr}}
+
+
+/* =========================================================
+   AI SERVICES & AUTOMATION (chat + robot with floating services)
+   ========================================================= */
+.ai{background:var(--mist);position:relative;overflow:hidden}
+.ai .duo{display:grid;grid-template-columns:.95fr 1.05fr;grid-template-rows:800px;gap:20px;align-items:stretch}
+.apanel{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.4vw,28px)}
+/* left: intro + chat */
+.chatcol{display:flex;flex-direction:column;gap:18px;min-height:0;overflow:hidden}
+.chatcol .intro h3{font-size:clamp(22px,2vw,28px);font-weight:600;margin-top:10px}
+.chatcol .intro p{color:var(--slate);margin:10px 0 0;font-size:14.5px;max-width:52ch}
+.chatcol .pills{display:flex;flex-wrap:wrap;gap:8px}
+.chatcol .pills .pill{background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+.cpanel{display:flex;flex-direction:column;flex:1;min-height:0;overflow:hidden;border:1px solid var(--line);border-radius:var(--r-md);background:#fff}
+.cpanel .hd{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.cpanel .hd .av{width:40px;height:40px;border-radius:50%;background:var(--crimson);display:grid;place-items:center;flex:none}
+.cpanel .hd .av svg{width:22px;height:22px}
+.cpanel .hd b{display:block;font-family:var(--fd);font-size:15px;font-weight:600}
+.cpanel .hd small{color:var(--slate);font-size:12.5px;display:flex;align-items:center;gap:6px}
+.cpanel .hd small::before{content:"";width:7px;height:7px;border-radius:50%;background:#2DBE6C}
+.cpanel .hd .ctl{margin-left:auto;display:flex;gap:4px}
+.cpanel .hd .ctl button{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;color:var(--slate);transition:.2s}
+.cpanel .hd .ctl button:hover{background:var(--paper);color:var(--ink)}
+.cpanel .hd .ctl svg{width:15px;height:15px}
+.cpanel .lab{text-align:center;font-size:12px;color:var(--slate);padding:10px 0 2px}
+.cpanel .msgs{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:9px;padding:8px 14px;justify-content:flex-end;mask-image:linear-gradient(to bottom,transparent,#000 22px)}
+.cmsg{max-width:86%;padding:9px 12px;border-radius:14px;font-size:13.5px;line-height:1.45;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;position:relative}
+.cmsg.in{opacity:1;transform:none}
+.cmsg.u{align-self:flex-end;background:var(--crimson);color:#fff;border-bottom-right-radius:4px}
+.cmsg.b{align-self:flex-start;background:var(--mist);color:var(--ink);border-bottom-left-radius:4px}
+.cmsg .src{display:block;font-family:var(--fm);font-size:10px;color:var(--steel);letter-spacing:.04em;margin-top:5px}
+.cmsg .ts{display:flex;justify-content:flex-end;gap:5px;align-items:center;font-size:10px;margin-top:4px;color:var(--steel)}
+.cmsg.u .ts{color:rgba(255,255,255,.75)}
+.cmsg .ts svg{width:12px;height:12px}
+.cmsg .cur{display:inline-block;width:1.5px;height:1em;background:var(--ink);vertical-align:-2px;margin-left:2px;animation:caret .8s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.cpanel .scn{display:flex;gap:6px;flex-wrap:wrap;padding:8px 14px 10px}
+.cpanel .scn button{font-size:11.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--slate);transition:.2s}
+.cpanel .scn button:hover{border-color:var(--ink);color:var(--ink)}
+.cpanel .scn button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cpanel .inp{border-top:1px solid var(--line);padding:12px 14px;display:flex;gap:10px;align-items:center}
+.cpanel .inp div{flex:1;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:13.5px;color:var(--steel);background:var(--paper)}
+.cpanel .inp button{width:40px;height:40px;border-radius:50%;background:var(--crimson);color:#fff;display:grid;place-items:center;flex:none}
+.cpanel .inp button svg{width:15px;height:15px}
+/* right: robot stage with floating service cards */
+.bot-stage{position:relative;display:grid;place-items:center;min-height:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.bot-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(14,15,20,.08) 1px,transparent 1px);background-size:16px 16px;mask-image:radial-gradient(60% 60% at 50% 50%,#000,transparent)}
+.bot-stage .glow{position:absolute;width:52%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(212,32,39,.16),rgba(220,231,241,.6) 55%,transparent 72%);left:50%;top:50%;translate:-50% -52%}
+.bot-stage .halo{position:absolute;width:72%;aspect-ratio:1;border-radius:50%;border:1px dashed var(--line);left:50%;top:50%;translate:-50% -50%;animation:spin 80s linear infinite}
+.bot-stage .halo::before{content:"";position:absolute;inset:18%;border-radius:50%;border:1px dashed var(--line)}
+.bot-stage .online{position:absolute;top:16px;left:50%;translate:-50% 0;font-family:var(--fm);font-size:10.5px;letter-spacing:.12em;display:inline-flex;align-items:center;gap:6px;color:var(--slate);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;z-index:2}
+.bot-stage .online i{width:8px;height:8px;border-radius:50%;background:#2DBE6C;box-shadow:0 0 0 4px rgba(45,190,108,.18)}
+.bot-stage .bot{position:relative;width:min(46%,250px);animation:float 5s ease-in-out infinite;z-index:1}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.bot-stage .shadow{position:absolute;left:50%;top:calc(50% + 150px);translate:-50% 0;width:34%;height:14px;border-radius:50%;background:rgba(14,15,20,.12);filter:blur(6px);animation:shade 5s ease-in-out infinite}
+@keyframes shade{0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(.85);opacity:.6}}
+.bot .eye{animation:blink 4.5s infinite;transform-origin:center;transform-box:fill-box}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}
+.fcard{position:absolute;z-index:3;width:min(44%,230px);background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:16px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:8px;animation:bob 6s ease-in-out infinite;transition:border-color .3s,transform .3s}
+.fcard:hover{border-color:var(--crimson)}
+.fcard .ic{width:38px;height:38px;border-radius:10px;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center}
+.fcard .ic.cool{background:var(--glacier);color:var(--glacier-deep)}
+.fcard .ic svg{width:18px;height:18px}
+.fcard h4{font-size:15px;font-weight:600}
+.fcard p{margin:0;color:var(--slate);font-size:12.5px;line-height:1.45}
+.fcard .meta{display:flex;flex-wrap:wrap;gap:5px}
+.fcard .meta .pill{font-size:11px;padding:4px 9px}
+.fcard .n{position:absolute;top:14px;right:14px;font-family:var(--fm);font-size:10.5px;color:var(--steel)}
+.fcard.f1{left:18px;top:60px}
+.fcard.f2{right:18px;top:92px;animation-delay:-1.5s}
+.fcard.f3{left:18px;bottom:60px;animation-delay:-3s}
+.fcard.f4{right:18px;bottom:28px;animation-delay:-4.5s}
+@keyframes bob{0%,100%{margin-top:0}50%{margin-top:-8px}}
+@media (max-width:1100px){.ai .duo{grid-template-columns:1fr;grid-template-rows:auto}.chatcol{overflow:visible}.bot-stage{min-height:620px}.cpanel{flex:none;height:480px}}
+@media (max-width:640px){
+  .bot-stage{display:block;min-height:0;padding:20px 16px 16px}
+  .bot-stage .glow,.bot-stage .halo,.bot-stage .shadow{display:none}
+  .bot-stage .online{position:static;translate:none;margin:0 auto 10px;width:max-content;display:flex}
+  .bot-stage .bot{width:min(60%,220px);margin:0 auto 16px;display:block}
+  .fcard,.fcard.f1,.fcard.f2,.fcard.f3,.fcard.f4{position:relative;inset:auto;width:auto;animation:none;margin-top:10px}
+  .cpanel{height:440px}
+}
+
+/* automation flow strip */
+.flow{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,2.6vw,30px);display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.flow .lbl{max-width:220px}
+.flow .lbl b{display:block;font-family:var(--fd);font-size:18px;font-weight:600;margin-bottom:4px}
+.flow .lbl span{font-size:13.5px;color:var(--slate)}
+.flow .nodes{display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:0;position:relative}
+.flow .nodes::before{content:"";position:absolute;left:10%;right:10%;top:26px;height:2px;background:var(--line)}
+.flow .nodes::after{content:"";position:absolute;left:10%;top:25px;width:10px;height:4px;border-radius:2px;background:var(--crimson);animation:pulse 3.2s linear infinite}
+@keyframes pulse{0%{left:10%;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:calc(90% - 10px);opacity:0}}
+.node{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;position:relative}
+.node .ic{width:52px;height:52px;border-radius:14px;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:.3s}
+.node:hover .ic{background:var(--ink);color:#fff;border-color:var(--ink)}
+.node .ic svg{width:22px;height:22px}
+.node b{font-size:13.5px;font-weight:600}
+.node small{font-size:11.5px;color:var(--steel);display:block;margin-top:-6px}
+.node.hot .ic{background:var(--crimson);color:#fff;border-color:var(--crimson)}
+@media (max-width:980px){.flow{grid-template-columns:1fr}.flow .lbl{max-width:none}}
+@media (max-width:640px){.flow .nodes{grid-template-columns:repeat(2,1fr);gap:18px}.flow .nodes::before,.flow .nodes::after{display:none}}
+
+
+/* =========================================================
+   SHOPWARE PAGE
+   ========================================================= */
+.sw-hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding-block:clamp(56px,7vw,96px)}
+.sw-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 50% at 85% 15%,rgba(212,32,39,.28),transparent 60%),radial-gradient(40% 40% at 5% 95%,rgba(47,74,104,.35),transparent 60%);pointer-events:none}
+.sw-hero .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(70% 70% at 50% 40%,#000,transparent);pointer-events:none}
+.sw-hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.crumbs{display:flex;gap:8px;align-items:center;font-family:var(--fm);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#9AA0AB;margin-bottom:18px}
+.crumbs a:hover{color:#fff}
+.crumbs i{width:4px;height:4px;border-radius:50%;background:var(--crimson);display:inline-block}
+.sw-hero h1{font-size:clamp(36px,4.8vw,64px);font-weight:600;margin:16px 0 20px}
+.sw-hero h1 .accent{color:#FF6B70}
+.sw-hero p{color:#C7CBD4;max-width:58ch;margin:0 0 14px;font-size:16.5px}
+.sw-hero .eyebrow{color:#FF8A8E}
+.sw-hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.sw-hero .proof{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:22px;margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+.sw-hero .proof div{display:flex;flex-direction:column;gap:3px}
+.sw-hero .proof b{font-family:var(--fd);font-size:17px;font-weight:600}
+.sw-hero .proof span{font-size:11.5px;color:#9AA0AB;letter-spacing:.06em;text-transform:uppercase;font-family:var(--fm)}
+.sw-hero .visual{position:relative}
+.sw-hero .frame{border-radius:var(--r-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-lg),0 0 0 1px rgba(255,255,255,.08)}
+.sw-hero .frame .bar{height:30px;background:#F1F1EE;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid #E6E6E1}
+.sw-hero .frame .bar i{width:8px;height:8px;border-radius:50%;background:#D9D9D4}
+.sw-hero .frame .bar i:nth-child(1){background:#F0665E}.sw-hero .frame .bar i:nth-child(2){background:#F2BE4E}.sw-hero .frame .bar i:nth-child(3){background:#5BC66A}
+.sw-hero .frame .bar em{margin-left:auto;font-style:normal;font-family:var(--fm);font-size:10px;color:#9AA0AB}
+.sw-hero .frame img{width:100%;height:auto;display:block}
+.sw-hero .badge{position:absolute;background:#fff;border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-lg);color:var(--ink)}
+.sw-hero .badge img{height:40px;width:auto}
+.sw-hero .badge b{display:block;font-family:var(--fd);font-size:13.5px;font-weight:600}
+.sw-hero .badge small{font-size:11.5px;color:var(--slate)}
+.sw-hero .badge.b1{left:-18px;bottom:28px}
+.sw-hero .badge.b2{right:-14px;top:-18px}
+@media (max-width:980px){.sw-hero .proof{grid-template-columns:repeat(2,auto)}.sw-hero .wrap{grid-template-columns:1fr}.sw-hero .badge.b1{left:8px}.sw-hero .badge.b2{right:8px;top:8px}}
+
+/* intro */
+.sw-intro .layout{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
+.sw-intro h2{font-size:clamp(28px,3.4vw,44px);margin:14px 0 18px}
+.sw-intro p{color:var(--slate);margin:0 0 14px}
+.sw-intro .caps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sw-intro .caps div{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;display:flex;gap:12px;align-items:center;font-weight:500;font-size:14.5px;transition:.25s}
+.sw-intro .caps div:hover{border-color:var(--crimson);transform:translateY(-2px)}
+.sw-intro .caps .ic{width:36px;height:36px;border-radius:10px;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center;flex:none}
+.sw-intro .caps .ic svg{width:17px;height:17px}
+@media (max-width:900px){.sw-intro .layout{grid-template-columns:1fr}}
+@media (max-width:520px){.sw-intro .caps{grid-template-columns:1fr}}
+
+/* services we offer */
+.sw-services{background:var(--mist)}
+.sw-services .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.scard2{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative}
+.scard2:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:transparent}
+.scard2 .img{background:linear-gradient(160deg,var(--glacier),#fff);padding:22px;display:grid;place-items:center;height:200px}
+.scard2 .img img{max-height:156px;max-width:100%;width:auto;object-fit:contain}
+.scard2 .img{overflow:hidden}
+.scard2 .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.scard2 h3{font-size:19px;font-weight:600}
+.scard2 p{margin:0;color:var(--slate);font-size:14.5px;flex:1}
+.scard2 .n{position:absolute;top:16px;left:18px;font-family:var(--fm);font-size:11px;color:var(--crimson);background:#fff;border-radius:999px;padding:4px 9px}
+@media (max-width:980px){.sw-services .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.sw-services .grid{grid-template-columns:1fr}}
+
+/* solution rows */
+.sol{padding-block:clamp(56px,6vw,88px)}
+.sol:nth-of-type(even){background:var(--mist)}
+.sol .row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.sol .row.flip .media{order:2}
+.sol h2{font-size:clamp(26px,3vw,40px);margin:14px 0 16px}
+.sol p{color:var(--slate);margin:0 0 20px}
+.sol .media{position:relative;border-radius:var(--r-lg);overflow:hidden;background:#fff;border:1px solid var(--line);padding:clamp(18px,3vw,36px);box-shadow:var(--shadow-sm)}
+.sol .media::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(14,15,20,.07) 1px,transparent 1px);background-size:16px 16px;mask-image:radial-gradient(70% 70% at 50% 50%,#000,transparent);pointer-events:none}
+.sol .media img{position:relative;width:100%;height:auto;max-height:380px;object-fit:contain}
+.sol .media .tag{position:absolute;left:16px;top:16px;z-index:1}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.checks.two{grid-template-columns:1fr 1fr;gap:10px 22px}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:15px;line-height:1.5}
+.checks li i{width:22px;height:22px;border-radius:50%;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center;margin-top:2px}
+.checks li i svg{width:12px;height:12px}
+@media (max-width:900px){.sol .row{grid-template-columns:1fr}.sol .row.flip .media{order:0}.checks.two{grid-template-columns:1fr}}
+
+/* why bay20 */
+.why2 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.wcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 20px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;transition:.3s;position:relative;overflow:hidden}
+.wcard::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--crimson);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.wcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.wcard:hover::after{transform:scaleX(1)}
+.wcard .ic{width:72px;height:72px;border-radius:20px;background:var(--crimson-soft);display:grid;place-items:center}
+.wcard .ic img{width:44px;height:44px;object-fit:contain}
+.wcard h3{font-size:15.5px;font-weight:600;line-height:1.3}
+.wcard .n{position:absolute;top:12px;right:14px;font-family:var(--fm);font-size:10.5px;color:var(--steel)}
+@media (max-width:1100px){.why2 .grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.why2 .grid{grid-template-columns:1fr 1fr}}
+
+/* FAQ */
+.faq{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.faq::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 100% 100%,rgba(212,32,39,.22),transparent 60%);pointer-events:none}
+.faq .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.faq .eyebrow{color:#FF8A8E}
+.faq h2{font-size:clamp(30px,3.6vw,48px);margin:14px 0 18px}
+.faq p{color:#B9BDC7;margin:0 0 14px}
+.faq .list{display:grid;gap:10px}
+.faq details{background:var(--graphite);border:1px solid var(--graphite-2);border-radius:var(--r-md);overflow:hidden;transition:border-color .3s}
+.faq details[open]{border-color:rgba(212,32,39,.5)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-family:var(--fd);font-size:17px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .tg{width:34px;height:34px;border-radius:50%;border:1px solid var(--graphite-2);display:grid;place-items:center;flex:none;transition:.3s}
+.faq summary .tg svg{width:14px;height:14px;transition:transform .3s}
+.faq details[open] summary .tg{background:var(--crimson);border-color:var(--crimson)}
+.faq details[open] summary .tg svg{transform:rotate(45deg)}
+.faq details .a{padding:0 20px 20px;color:#B9BDC7;font-size:15px;line-height:1.6}
+@media (max-width:900px){.faq .wrap{grid-template-columns:1fr}}
+
+/* blogs */
+.sw-blog .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){.sw-blog .cards{grid-template-columns:1fr}}
+
+/* Floating helpers */
+.float{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.float a,.float button{height:48px;border-radius:999px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:10px;padding:0 18px 0 14px;font-weight:600;font-size:14px;box-shadow:var(--shadow-lg);border:1px solid var(--graphite-2);transition:transform .2s}
+.float a:hover,.float button:hover{transform:translateY(-2px)}
+.float .wa{background:#25D366;color:#fff;border-color:transparent}
+.float svg{width:18px;height:18px}
+.totop{width:48px;padding:0!important;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.totop.show{opacity:1;pointer-events:auto}
+
+/* =========================================================
+   HIRE MAGENTO 2 DEVELOPER PAGE
+   ========================================================= */
+.nav>button.active{color:var(--crimson)}
+
+/* hero: simple card + Magento mark */
+.sw-hero .proof b{font-size:16px}
+.hero-simple{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;padding:70px 0 8px;min-width:0}
+.hero-simple .glow{position:absolute;width:70%;aspect-ratio:1;border-radius:50%;left:50%;top:45%;translate:-50% -50%;background:radial-gradient(circle,rgba(212,32,39,.28),transparent 65%);pointer-events:none}
+.hero-simple .card{position:relative;z-index:2;width:100%;max-width:460px;background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:70px 30px 30px;box-shadow:var(--shadow-lg),0 0 0 1px rgba(255,255,255,.08);text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.hero-simple .logo{position:absolute;top:-58px;left:50%;translate:-50% 0;width:116px;height:116px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 8px rgba(255,255,255,.12),var(--shadow-lg)}
+.hero-simple .logo::before{content:"";position:absolute;inset:-18px;border-radius:50%;border:1px dashed rgba(255,255,255,.35);animation:spin 40s linear infinite}
+.hero-simple .logo img{width:72px;height:72px;object-fit:contain;animation:float 5s ease-in-out infinite}
+.hero-simple .card>b{font-family:var(--fd);font-size:clamp(20px,1.8vw,24px);font-weight:600;line-height:1.2}
+.hero-simple .card>small{color:var(--slate);font-size:14px;max-width:34ch}
+.hero-simple .row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.hero-simple .card .btn{margin-top:6px}
+.hero-simple .badges{position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-simple .badge{position:static;background:#fff;border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-lg);color:var(--ink)}
+.hero-simple .badge img{height:38px;width:auto}
+.hero-simple .badge b{display:block;font-family:var(--fd);font-size:13.5px;font-weight:600}
+.hero-simple .badge small{font-size:11.5px;color:var(--slate)}
+@media (max-width:980px){.hero-simple{padding-top:76px}.hero-simple .card{max-width:none}.hero-simple .glow{display:none}}
+
+/* what we do: 7 tiles */
+.sw-intro .caps.seven div:last-child{grid-column:1/-1}
+.sw-intro .caps div .arrow{margin-left:auto;width:14px;height:14px;color:var(--steel);transition:.25s}
+.sw-intro .caps div:hover .arrow{color:var(--crimson);transform:translateX(3px)}
+
+/* advantages */
+.adv{background:var(--mist)}
+.adv .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.acard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px 28px;position:relative;display:flex;flex-direction:column;gap:12px;transition:.3s;overflow:hidden}
+.acard:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:transparent}
+.acard .n{font-family:var(--fm);font-size:11px;color:var(--crimson)}
+.acard .ic{width:48px;height:48px;border-radius:14px;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center}
+.acard .ic svg{width:22px;height:22px}
+.acard h3{font-size:19px;font-weight:600}
+.acard p{margin:0;color:var(--slate);font-size:14.5px;flex:1}
+.acard .ghost{position:absolute;right:-50px;bottom:-70px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,var(--crimson-soft),transparent 70%);opacity:0;transition:opacity .4s}
+.acard:hover .ghost{opacity:1}
+@media (max-width:980px){.adv .grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.adv .grid{grid-template-columns:1fr}}
+
+/* hiring process */
+.process .track{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.process .track::before{content:"";position:absolute;left:28px;right:28px;top:28px;height:2px;background:var(--line)}
+.pstep{position:relative;padding-top:0}
+.pstep .dot{width:56px;height:56px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--fm);font-size:12px;color:var(--crimson);position:relative;z-index:1;transition:.3s}
+.pstep:hover .dot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pstep h3{font-size:18px;font-weight:600;margin-top:20px}
+.pstep p{margin:8px 0 0;color:var(--slate);font-size:14.5px;max-width:30ch}
+.pstep small{display:inline-block;margin-top:12px;font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+@media (max-width:900px){.process .track{grid-template-columns:1fr 1fr}.process .track::before{display:none}}
+@media (max-width:520px){.process .track{grid-template-columns:1fr}}
+
+/* why hire: stat panel + checklist */
+.hire .row{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,80px);align-items:start}
+.hire h2{font-size:clamp(26px,3vw,40px);margin:14px 0 16px}
+.hire p{color:var(--slate);margin:0 0 20px}
+.hpanel{position:sticky;top:100px;background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:clamp(24px,3vw,36px);position:relative;overflow:hidden}
+.hpanel::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 50% at 90% 10%,rgba(212,32,39,.3),transparent 60%);pointer-events:none}
+.hpanel .eyebrow{color:#FF8A8E}
+.hpanel h3{font-size:clamp(22px,2.2vw,30px);margin:12px 0 22px;position:relative}
+.hpanel .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.hpanel .stats div{background:var(--graphite);border:1px solid var(--graphite-2);border-radius:var(--r-md);padding:18px 18px 16px}
+.hpanel .stats b{font-family:var(--fd);font-size:clamp(26px,2.8vw,36px);letter-spacing:-.03em;display:block;line-height:1}
+.hpanel .stats span{font-family:var(--fm);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0AB;display:block;margin-top:8px}
+.hpanel .tools{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px;position:relative}
+.hpanel .tools span{font-size:12px;border:1px solid var(--graphite-2);border-radius:999px;padding:5px 10px;color:#C7CBD4}
+.hire .checks li{font-size:14.5px}
+@media (max-width:900px){.hire .row{grid-template-columns:1fr}.hpanel{position:static}}
+
+/* engagement models */
+.models{background:var(--mist)}
+.models .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.mcard{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px;display:flex;flex-direction:column;gap:16px;position:relative;transition:.3s}
+.mcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.mcard.hot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.mcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.mcard .ic{width:46px;height:46px;border-radius:13px;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center}
+.mcard.hot .ic{background:rgba(212,32,39,.2);color:#FF8A8E}
+.mcard .ic svg{width:21px;height:21px}
+.mcard h3{font-size:22px;font-weight:600}
+.mcard .sub{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);display:block;margin-top:6px}
+.mcard.hot .sub{color:#9AA0AB}
+.mcard p{margin:0;color:var(--slate);font-size:14.5px}
+.mcard.hot p{color:#B9BDC7}
+.mcard ul{list-style:none;margin:0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;flex:1}
+.mcard.hot ul{border-color:var(--graphite-2)}
+.mcard li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:14px;align-items:start}
+.mcard li i{width:20px;height:20px;border-radius:50%;background:var(--crimson-soft);color:var(--crimson);display:grid;place-items:center;margin-top:1px}
+.mcard.hot li i{background:rgba(212,32,39,.2);color:#FF8A8E}
+.mcard li i svg{width:11px;height:11px}
+.mcard .best{font-size:13px;color:var(--slate);padding:12px 14px;border-radius:var(--r-sm);background:var(--paper)}
+.mcard.hot .best{background:var(--graphite);color:#C7CBD4}
+.mcard .best b{color:inherit;font-weight:600}
+.mcard .btn{justify-content:center}
+@media (max-width:980px){.models .grid{grid-template-columns:1fr}.mcard.hot{order:-1}}
+
+/* faq two-column list for 10 items */
+.faq .wrap{grid-template-columns:.8fr 1.2fr}
+.faq .sticky{position:sticky;top:110px}
+@media (max-width:900px){.faq .sticky{position:static}}
+</style>
+</head>
+<body>
+
+<!-- ===================== TOP BAR ===================== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span><i class="dot"></i>An e-Commerce Solution Provider</span>
+      <span><a href="tel:+918800519180">IN +91-8800519180</a></span>
+      <span><a href="tel:+15186181023">US +1-518-618-1023</a></span>
+    </div>
+    <div class="right">
+      <span class="socials"><a href="mailto:manish@bay20.com">manish@bay20.com</a></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button aria-pressed="true">EN</button><button aria-pressed="false">DE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Bay20 Software home"><img src="assets/logo.png" alt="Bay20 Software"></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#services">SEO Packages</a>
+      <button data-mega="capabilities" aria-expanded="false">Capabilities <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+      <a href="shopware.html">Shopware</a>
+      <button data-mega="hire" aria-expanded="false" class="active">Hire Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+      <a href="index.html#blog">Blog</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn-ghost" href="#contact">Contact us</a>
+      <a class="btn btn-primary" href="#contact">Let's Discuss <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+
+  <!-- Mega: Capabilities -->
+  <div class="mega" id="mega-capabilities">
+    <div class="wrap">
+      <div><h4>Ecommerce CMS</h4><ul><li><a href="#">Shopware</a></li><li><a href="#">PrestaShop</a></li><li><a href="#">WooCommerce</a></li><li><a href="#">BigCommerce</a></li><li><a href="#">Shopify</a></li><li><a href="#">Squarespace</a></li><li><a href="#">Wix · Volusion · 3DCart</a></li></ul></div>
+      <div><h4>Magento</h4><ul><li><a href="hire-magento2-developer.html">Magento 2 Development</a></li><li><a href="#">Magento Cloud</a></li><li><a href="#">Custom Design</a></li><li><a href="#">Support &amp; Maintenance</a></li><li><a href="#">Migration M1 → M2</a></li><li><a href="#">Speed Optimization</a></li><li><a href="#">Security Patches</a></li></ul></div>
+      <div><h4>CRM · CMS · Mobile</h4><ul><li><a href="#">Salesforce</a></li><li><a href="#">HubSpot</a></li><li><a href="#">WordPress / Typo3 / Drupal</a></li><li><a href="#">Android &amp; Flutter apps</a></li><li><a href="#">Shopify &amp; BigCommerce apps</a></li><li><a href="#">PWA development</a></li><li><a href="#ai">AI &amp; automation</a></li></ul></div>
+      <div class="feature"><div><span class="pill ghost">Featured service</span><h3 style="font-size:20px;margin:12px 0 8px">Magento speed optimisation</h3><p>Measurable Core Web Vitals gains on Magento 2 stores, delivered as a fixed-scope package.</p></div><a class="btn btn-light" href="#">See packages</a></div>
+    </div>
+  </div>
+  <!-- Mega: Hire -->
+  <div class="mega" id="mega-hire">
+    <div class="wrap">
+      <div><h4>E-Commerce</h4><ul><li><a href="hire-magento2-developer.html" style="color:var(--crimson);font-weight:600">Hire Magento 2 Developer</a></li><li><a href="#">Hire Shopware 6 Developer</a></li><li><a href="#">Hire PrestaShop Developer</a></li><li><a href="#">Hire BigCommerce Developer</a></li><li><a href="#">Hire Shopify Developer</a></li></ul></div>
+      <div><h4>CMS &amp; Frameworks</h4><ul><li><a href="#">Hire WordPress Developer</a></li><li><a href="#">Hire Drupal / Joomla / Typo3</a></li><li><a href="#">Hire Laravel Developer</a></li><li><a href="#">Hire Node.js Developer</a></li><li><a href="#">Hire Symfony Developer</a></li></ul></div>
+      <div><h4>Mobile · CRM · Data</h4><ul><li><a href="#">Hire React Native / Flutter</a></li><li><a href="#">Hire Android / iOS Developer</a></li><li><a href="#">Hire Salesforce Developer</a></li><li><a href="#">Hire HubSpot Expert</a></li><li><a href="#">Hire Tableau / Data Analyst</a></li><li><a href="#">Hire Zapier Developer</a></li></ul></div>
+      <div class="feature"><div><span class="pill ghost">IT staff augmentation</span><h3 style="font-size:20px;margin:12px 0 8px">Dedicated developers, your timezone</h3><p>Scale your team with certified Magento, Shopware and Salesforce engineers in India or the US.</p></div><a class="btn btn-light" href="#contact">Request a profile</a></div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="panel" role="dialog" aria-label="Menu">
+    <header><img src="assets/logo.png" alt="Bay20" style="height:34px"><button class="xbtn" data-close aria-label="Close menu">×</button></header>
+    <nav>
+      <a href="#projects" data-close>Projects</a>
+      <a href="#services" data-close>SEO Packages</a>
+      <a href="#capabilities" data-close>Capabilities</a>
+      <div class="sub"><a href="shopware.html">Shopware</a><a href="hire-magento2-developer.html">Magento 2</a><a href="#">Shopify</a><a href="#">BigCommerce</a><a href="#">WooCommerce</a><a href="#">Salesforce · HubSpot</a></div>
+      <a href="#ai" data-close>AI &amp; Automation</a>
+      <a href="#why" data-close>Hire Us</a>
+      <a href="#blog" data-close>Blog</a>
+      <a href="#contact" data-close>Contact</a>
+    </nav>
+    <div class="foot">
+      <a class="btn btn-primary" href="#contact" data-close>Let's Discuss</a>
+      <a class="btn btn-ghost" href="tel:+918800519180">Call +91-8800519180</a>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="sw-hero" aria-labelledby="hm-title">
+  <div class="grid-lines" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="index.html">Home</a><i></i><a href="#models">Hire Us</a><i></i><span>Magento 2 Developer</span></nav>
+      <span class="eyebrow reveal">Dedicated developers · Magento 2 certified</span>
+      <h1 id="hm-title" class="reveal" data-delay="1">Hire <span class="accent">Magento 2</span> Developer</h1>
+      <p class="reveal" data-delay="2">We pride ourselves on offering top-notch Magento 2 solutions. Unlock the full potential of your e-commerce business by hiring our highly skilled, Magento 2 certified developers and designers. With their expertise and in-depth knowledge, they craft captivating, seamless online experiences that drive sales and boost customer satisfaction.</p>
+      <p class="reveal" data-delay="2">Full-time, part-time or hourly. In-house team, strict NDA, time-tracked transparency and complete support after the project is done.</p>
+      <div class="actions reveal" data-delay="3">
+        <a class="btn btn-primary" href="#contact">Request a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-outline-light" href="#models">See engagement models</a>
+      </div>
+      <div class="proof reveal" data-delay="4">
+        <div><b>5+ years</b><span>Average experience</span></div>
+        <div><b>Certified</b><span>Magento 2 developers</span></div>
+        <div><b>ISO 9001:2008</b><span>Quality process</span></div>
+        <div><b>In-house</b><span>No outsourcing</span></div>
+      </div>
+    </div>
+
+    <div class="hero-simple reveal" data-delay="2" aria-label="Certified Magento 2 developers available">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="card">
+        <div class="logo"><img src="assets/mg-hero.png" alt="Magento 2"></div>
+        <b>12 certified Magento 2 developers available</b>
+        <small>Full-time, part-time or hourly. In-house, under NDA, time-tracked.</small>
+        <div class="row"><span class="pill red">Adobe certified</span><span class="pill cool">5+ yrs average</span><span class="pill line">IST · CET · EST</span></div>
+        <a class="btn btn-primary" href="#contact">Request profiles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="badges">
+        <div class="badge"><img src="assets/partner-magento-certified.png" alt="Magento Certified Developer"><div><b>Magento Certified</b><small>Developer &amp; solution specialist</small></div></div>
+        <div class="badge"><img src="assets/partner-magento-marketplace.png" alt="Magento Marketplace Partner"><div><b>Marketplace Partner</b><small>Extensions &amp; themes</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT WE DO ON MAGENTO 2 ===================== -->
+<section class="sw-intro" id="services" aria-labelledby="svc-t">
+  <div class="wrap"><div class="layout">
+    <div class="reveal">
+      <span class="eyebrow">What we do on Magento 2</span>
+      <h2 id="svc-t">Development, design and SEO services from <span class="accent">certified Magento 2 developers.</span></h2>
+      <p>Bay20 has a pool of certified Magento 2 developers with expertise on both frontend and backend development. We focus on providing world-class quality at very reasonable rates, and we maintain good code quality and fast turnaround time on development and maintenance work alike.</p>
+      <p>Magento 2 experts at Bay20 have 5+ years of experience on average. We follow the latest trends and updates to give you the best quality and are very experienced in delivering optimised Magento 2 solutions.</p>
+      <a class="link" href="#contact">Hire Magento 2 developers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="caps seven">
+      <div class="reveal" data-delay="0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>Magento 2 Website Development<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="reveal" data-delay="1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-7 7a2.1 2.1 0 0 1-3-3l7-7a6 6 0 0 1 7.9-7.9z"/></svg></span>Magento 2 Support &amp; Maintenance<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="reveal" data-delay="2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19 19 12l-7-7-7 7 7 7Z"/><path d="M12 5v14M5 12h14"/></svg></span>Magento 2 Custom Design<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="reveal" data-delay="0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>Magento 2 Data Migration<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="reveal" data-delay="1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M8 11h6M11 8v6"/></svg></span>Magento 2 SEO<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="reveal" data-delay="2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span>Magento 2 Speed Optimization<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="reveal" data-delay="0"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></span>Magento 2 Theme Development<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== ADVANTAGES ===================== -->
+<section class="adv" aria-labelledby="adv-t">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">How we work</span><h2 id="adv-t" class="reveal" data-delay="1">Good code quality and <span class="accent">fast turnaround.</span></h2></div>
+      <div class="right reveal" data-delay="2"><p class="lede">Bay20 experts are known for quality and delivery. Our team also works as a consultant, advising on the best way to implement a feature and the long-term impact of any function, so merchants avoid mistakes that cost them later.</p></div>
+    </div>
+    <div class="grid">
+      <article class="acard reveal" data-delay="0"><span class="n">01</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v1m0 8v1M9.5 14a2.5 2.5 0 0 0 2.5 1.5c1.4 0 2.5-.8 2.5-1.8s-1.1-1.5-2.5-1.7S9.5 11.3 9.5 10.3 10.6 8.5 12 8.5a2.5 2.5 0 0 1 2.5 1.5"/></svg></span><h3>Reasonable Pricing</h3><p>Bay20 provides the best pricing in its cadre of Magento 2 service providers. You get the maximum out of your investment.</p><i class="ghost"></i></article>
+      <article class="acard reveal" data-delay="1"><span class="n">02</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15.5-6.3M21 12a9 9 0 0 1-15.5 6.3M18 3v4h-4M6 21v-4h4"/></svg></span><h3>Agile Methodology</h3><p>We follow agile like religion at Bay20. Our development methodology is entirely based on agile: adaptive planning, short iterations and timely delivery.</p><i class="ghost"></i></article>
+      <article class="acard reveal" data-delay="2"><span class="n">03</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><h3>Coding Standards</h3><p>We follow Magento 2 coding standards and flow. Our experts take coding best practices very seriously, so upgrades and extensions stay painless.</p><i class="ghost"></i></article>
+      <article class="acard reveal" data-delay="3"><span class="n">04</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg></span><h3>ISO 9001:2008 Certified</h3><p>We follow the ISO 9001 quality management standard and its recommendations for development firms in every development procedure.</p><i class="ghost"></i></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HIRING PROCESS ===================== -->
+<section class="process" id="process" aria-labelledby="proc-t">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">How hiring works</span><h2 id="proc-t" class="reveal" data-delay="1">From requirement to <span class="accent">first commit.</span></h2></div>
+      <div class="right reveal" data-delay="2"><p class="lede">A simple, transparent path. You talk to the developers you hire, and every hour is tracked.</p></div>
+    </div>
+    <div class="track">
+      <div class="pstep reveal" data-delay="0"><div class="dot">01</div><h3>Share your requirement</h3><p>Tell us about your store, the work ahead and the skills you need: backend, theme, speed, migration or all of it.</p><small>Under NDA</small></div>
+      <div class="pstep reveal" data-delay="1"><div class="dot">02</div><h3>Shortlist profiles</h3><p>We send matching certified developer profiles from our in-house team with experience and availability.</p><small>Profiles &amp; rates</small></div>
+      <div class="pstep reveal" data-delay="2"><div class="dot">03</div><h3>Interview &amp; trial</h3><p>Interview the developers yourself, then start with a small task to see code quality and communication first-hand.</p><small>Your call</small></div>
+      <div class="pstep reveal" data-delay="3"><div class="dot">04</div><h3>Onboard &amp; track</h3><p>Pick full-time, part-time or hourly. Work is tracked with time-tracking software and reported transparently.</p><small>Time-tracked</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY HIRE BAY20 EXPERTS ===================== -->
+<section class="hire sol" id="why-hire" aria-labelledby="hire-t" style="background:var(--mist)">
+  <div class="wrap"><div class="row">
+    <aside class="hpanel reveal" aria-label="Bay20 Magento 2 team at a glance">
+      <span class="eyebrow">At a glance</span>
+      <h3>Certified Magento 2 experts. Complete transparency.</h3>
+      <div class="stats">
+        <div><b data-count="5" data-suffix="+">0</b><span>Years avg. experience</span></div>
+        <div><b data-count="100" data-suffix="%">0</b><span>In-house team</span></div>
+        <div><b data-count="3">0</b><span>Work models</span></div>
+        <div><b>NDA</b><span>On every engagement</span></div>
+      </div>
+      <div class="tools"><span>Magento 2.4.x</span><span>Adobe Commerce</span><span>Hyvä</span><span>PWA Studio</span><span>Elasticsearch / OpenSearch</span><span>Varnish</span><span>Redis</span><span>Composer</span><span>PHPUnit</span><span>Git</span></div>
+    </aside>
+    <div class="reveal" data-delay="1">
+      <span class="eyebrow">Why hire Bay20 experts?</span>
+      <h2 id="hire-t">Hire Magento 2 certified <span class="accent">developers and designers.</span></h2>
+      <p>Engaging our adept Magento 2 developers is about embracing more than just technical expertise. We’re driven by the conviction that your e-commerce site should be an impeccable blend of form and function, not only attracting visitors but converting them into staunch advocates of your brand. With a keen understanding of customer behaviour and a steadfast commitment to optimal user interactions, our Magento 2 team ensures your digital storefront is a beacon of excellence, compelling users to return time and again.</p>
+      <ul class="checks two">
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Magento 2 certified experts</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Complete transparency and strict NDA terms</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Trusted by several customers</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Experience on large-scale, complicated assignments</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>ISO 9001:2008 certified firm</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Reasonable pricing model</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Work model for every need: full-time, part-time, hourly</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>IT infrastructure with stable internet</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Complete in-house team, no outsourcing</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Affordable prices</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Transparency via time-tracking software</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Non-disclosure agreement</span></li>
+        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i><span>Complete support after delivery</span></li>
+      </ul>
+      <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="#contact">Let's talk <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="https://api.whatsapp.com/send?phone=+918800519180">WhatsApp us</a>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== ENGAGEMENT MODELS ===================== -->
+<section class="models" id="models" aria-labelledby="models-t" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">Engagement models</span><h2 id="models-t" class="reveal" data-delay="1">A work model for <span class="accent">every type of need.</span></h2></div>
+      <div class="right reveal" data-delay="2"><p class="lede">Full-time, part-time or hourly. Same certified developers, same time-tracking transparency, same NDA. Rates on request.</p></div>
+    </div>
+    <div class="grid">
+      <article class="mcard reveal" data-delay="0">
+        <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="pill line">Flexible</span></div>
+        <div><h3>Hourly</h3><span class="sub">Pay for the hours used</span></div>
+        <p>For bug fixes, small features, security patches and ad-hoc maintenance on a live Magento 2 store.</p>
+        <ul>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Pre-paid hour bundles</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Time-tracked, reported weekly</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Fast turnaround on maintenance</li>
+        </ul>
+        <div class="best"><b>Best for:</b> support &amp; maintenance, quick fixes</div>
+        <a class="btn btn-ghost" href="#contact">Get hourly rates</a>
+      </article>
+      <article class="mcard hot reveal" data-delay="1">
+        <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><span class="pill red">Most popular</span></div>
+        <div><h3>Full-time dedicated</h3><span class="sub">160 hours / month · your team</span></div>
+        <p>A certified Magento 2 developer who works only on your store, in your tools, with daily communication and your timezone overlap.</p>
+        <ul>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Dedicated developer, 8 h / day</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Interview and choose the developer</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Project lead and QA included</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Monthly billing, cancel anytime</li>
+        </ul>
+        <div class="best"><b>Best for:</b> new builds, migrations, ongoing roadmaps</div>
+        <a class="btn btn-primary" href="#contact">Request profiles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="mcard reveal" data-delay="2">
+        <div class="top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9h-9V3Z"/><path d="M14 2.2A9 9 0 0 1 21.8 10H14V2.2Z"/></svg></span><span class="pill cool">Shared</span></div>
+        <div><h3>Part-time</h3><span class="sub">80 hours / month</span></div>
+        <p>Half a developer's month, reserved for you. Ideal when the backlog is steady but does not fill a full-time seat.</p>
+        <ul>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>4 h / day, fixed schedule</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Same developer every month</li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 4.5 4.5L19 7"/></svg></i>Upgrade to full-time anytime</li>
+        </ul>
+        <div class="best"><b>Best for:</b> feature backlogs, theme work, SEO tasks</div>
+        <a class="btn btn-ghost" href="#contact">Get part-time rates</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY BAY20 ===================== -->
+<section class="why2" id="why" aria-labelledby="why-t" style="background:var(--mist)">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">Why Bay20</span><h2 id="why-t" class="reveal" data-delay="1">Why You Should <span class="accent">Choose Bay20</span></h2></div>
+      <div class="right reveal" data-delay="2"><p class="lede">Our cutting-edge software will help your company save time and money while providing superior service to your clientele.</p></div>
+    </div>
+    <div class="grid"><div class="wcard reveal" data-delay="0"><span class="n">01</span><span class="ic"><img src="assets/why-icon-56.png" alt=""></span><h3>Highly Skilled and Experienced Programmers</h3></div><div class="wcard reveal" data-delay="1"><span class="n">02</span><span class="ic"><img src="assets/why-icon-57.png" alt=""></span><h3>Adaptive Procedures</h3></div><div class="wcard reveal" data-delay="2"><span class="n">03</span><span class="ic"><img src="assets/why-icon-58.png" alt=""></span><h3>Reputation Backed Up by Many Satisfied Customers</h3></div><div class="wcard reveal" data-delay="3"><span class="n">04</span><span class="ic"><img src="assets/why-icon-59.png" alt=""></span><h3>Maintaining Complete Happiness for Every One of Our Customers</h3></div><div class="wcard reveal" data-delay="4"><span class="n">05</span><span class="ic"><img src="assets/why-icon-60.png" alt=""></span><h3>Reasonable Costs</h3></div><div class="wcard reveal" data-delay="0"><span class="n">06</span><span class="ic"><img src="assets/why-icon-61.png" alt=""></span><h3>Certified by Nasscom</h3></div><div class="wcard reveal" data-delay="1"><span class="n">07</span><span class="ic"><img src="assets/why-icon-62.png" alt=""></span><h3>Support and Upkeep that are Actively Provided for</h3></div><div class="wcard reveal" data-delay="2"><span class="n">08</span><span class="ic"><img src="assets/why-icon-63.png" alt=""></span><h3>Top-Rated Magento 2 Professionals</h3></div><div class="wcard reveal" data-delay="3"><span class="n">09</span><span class="ic"><img src="assets/why-icon-64.png" alt=""></span><h3>The Ability to Serve International Customers</h3></div><div class="wcard reveal" data-delay="4"><span class="n">10</span><span class="ic"><img src="assets/why-icon-65.png" alt=""></span><h3>Certified to ISO 9001:2008 Standards</h3></div></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq" aria-labelledby="faq-t">
+  <div class="wrap">
+    <div class="sticky">
+      <span class="eyebrow reveal">FAQs</span>
+      <h2 id="faq-t" class="reveal" data-delay="1">Questions we hear <span style="color:#FF6B70">before every Magento 2 hire.</span></h2>
+      <p class="reveal" data-delay="2">Everything merchants ask us about Magento 2 development, migration, customisation and the support that follows. If your question is not here, ask us directly.</p>
+      <a class="btn btn-light reveal" data-delay="3" href="#contact" style="margin-top:8px">Ask us a question <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="list reveal" data-delay="2" id="faq-list">
+      <details open><summary>What benefits do Magento 2 certified developers and designers bring to my business?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Magento 2 certified developers and designers bring expertise in optimising your online store's performance, enhancing user experience, implementing secure payment gateways, customising themes and ensuring smooth integration with third-party systems.</div></details>
+      <details><summary>What is Magento eCommerce development?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Magento eCommerce development is the process of creating and customising online stores using the Magento platform. It involves designing and developing the website, integrating features and functionalities, managing products and optimising the user experience for seamless online shopping.</div></details>
+      <details><summary>Which languages are used in Magento development?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Magento development primarily uses PHP, the core programming language of the platform. Developers also use HTML, CSS, JavaScript, XML and MySQL for front-end design, styling, interactivity, data management and database integration.</div></details>
+      <details><summary>Can Bay20 migrate my website from another CMS to Magento?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Yes. Bay20 specialises in website migration services, including migrating websites from other content management systems to Magento, as well as Magento 1 to Magento 2 upgrades with products, customers, orders and SEO data preserved.</div></details>
+      <details><summary>How long does it take to develop a Magento web store from scratch?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">The timeline varies with the complexity and specific requirements of the project. Design complexity, feature integrations, customisations and data migration all influence the development duration. We give you a realistic estimate after a short discovery call.</div></details>
+      <details><summary>Can your developers and designers customise themes and templates in Magento 2?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Absolutely. Our Magento 2 certified professionals are proficient in customising themes and templates to create a unique and visually appealing online store that matches your brand.</div></details>
+      <details><summary>Do you offer ongoing support and maintenance after the project is completed?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Yes. We provide ongoing support and maintenance services for your Magento 2 website even after the project is completed, including security patches, version upgrades and performance monitoring.</div></details>
+      <details><summary>Can your developers integrate third-party extensions or APIs with Magento 2?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Absolutely. Our Magento 2 certified developers have expertise in integrating third-party extensions and APIs, such as ERP, CRM, payment, shipping and marketing tools, seamlessly with your Magento 2 website.</div></details>
+      <details><summary>Can your developers optimise the performance of my Magento 2 website?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Certainly. Our developers conduct performance audits, identify and resolve bottlenecks, optimise code and implement caching techniques such as Varnish and Redis to make your store faster.</div></details>
+      <details><summary>Are your Magento 2 certified developers and designers familiar with responsive design practices?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a">Yes. Our Magento 2 certified professionals are well-versed in responsive design practices and ensure your store provides a seamless user experience across desktops, tablets and phones.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RECENT BLOGS ===================== -->
+<section class="blog sw-blog" id="blog" aria-labelledby="blog-t">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">From the blog</span><h2 id="blog-t" class="reveal" data-delay="1">Recent <span class="accent">Blogs</span></h2></div>
+      <div class="right reveal" data-delay="2"><p class="lede">Practical eCommerce guides written by the engineers who ship them.</p><a class="link" href="index.html#blog">All articles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="cards">
+      <a class="post reveal" href="#"><div class="img"><img src="assets/blog-shopware-wp.png" alt="WordPress Blogs for Shopware"></div><div class="body"><div class="meta"><span class="pill red">Shopware</span><span>Guide</span></div><h3>WordPress Blogs for Shopware: Run Your Content and Your Store as One</h3><p>Bring your WordPress content into your Shopware storefront on one domain, one design, one seamless journey.</p><span class="link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="post reveal" data-delay="1" href="#"><div class="img"><img src="assets/blog-bigcommerce-metafields.png" alt="BigCommerce Metafields in Stencil Templates"></div><div class="body"><div class="meta"><span class="pill cool">BigCommerce</span><span>GraphQL guide</span></div><h3>BigCommerce Metafields in Stencil Templates (GraphQL Guide)</h3><p>Read product, variant and category metafields in Stencil with the Storefront GraphQL API.</p><span class="link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="post reveal" data-delay="2" href="#"><div class="img"><img src="assets/blog-aeo-geo-seo.png" alt="AEO vs GEO vs SEO"></div><div class="body"><div class="meta"><span class="pill cool">SEO</span><span>Strategy</span></div><h3>AEO vs GEO vs SEO: How to Get Your Site Cited by AI</h3><p>What changes when answer engines, not just search engines, decide who gets cited.</p><span class="link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="stories" id="stories" aria-labelledby="stories-t">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">Client stories</span><h2 id="stories-t" class="reveal" data-delay="1">Hear it from the <span class="accent">store owners.</span></h2></div>
+      <div class="right reveal" data-delay="2"><p class="lede">Short video testimonials from Bay20 clients on design, development and long-term support.</p></div>
+    </div>
+    <div class="cards">
+      <a class="story reveal" href="#"><img src="assets/proj-alkaline.png" alt=""><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><small>Client testimonial</small><h3>Bay20 Client Story · Magento Development</h3><p>Development, custom modules, ongoing support.</p></a>
+      <a class="story reveal" data-delay="1" href="#"><img src="assets/proj-beachbu.png" alt=""><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><small>Client testimonial</small><h3>Bay20 Client Story · Magento Maintenance</h3><p>Magento maintenance &amp; support. Reliable. Responsive. Results.</p></a>
+      <a class="story reveal" data-delay="2" href="#"><img src="assets/proj-contemporary.png" alt=""><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><small>Client testimonial</small><h3>Bay20 Client Story · BigCommerce</h3><p>BigCommerce design &amp; development support.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTNERS ===================== -->
+<section class="partners" aria-label="Partners and certifications">
+  <div class="wrap"><div class="head reveal"><span class="eyebrow">Partners &amp; certifications</span><p>Certified partner across the platforms we build on. ISO 9001 certified, NASSCOM member.</p></div></div>
+  <div class="marquee reveal" data-delay="1"><div class="track" id="marquee-track">
+    <div class="logo-card"><img src="assets/partner-shopware-expert.png" alt="Shopware Expert"></div>
+    <div class="logo-card"><img src="assets/partner-shopware-extension.png" alt="Shopware Extension Partner"></div>
+    <div class="logo-card"><img src="assets/partner-magento-certified.png" alt="Magento Certified"><span>Magento Certified</span></div>
+    <div class="logo-card"><img src="assets/partner-magento-marketplace.png" alt="Magento Marketplace partner"></div>
+    <div class="logo-card"><img src="assets/partner-shopify.png" alt="Shopify Partner"></div>
+    <div class="logo-card"><img src="assets/partner-bigcommerce.png" alt="BigCommerce Certified"><span>BigCommerce Certified</span></div>
+    <div class="logo-card"><img src="assets/partner-scandipwa.png" alt="ScandiPWA Certified Partner"></div>
+    <div class="logo-card"><img src="assets/badge-iso.png" alt="ISO 9001:2008"><span>ISO 9001</span></div>
+    <div class="logo-card"><img src="assets/badge-nasscom.png" alt="NASSCOM member"><span>NASSCOM</span></div>
+  </div></div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-band" id="contact" aria-labelledby="cta-title">
+  <div class="wrap"><div class="box reveal">
+    <div><span class="pill ghost">Request a quote</span><h2 id="cta-title" style="margin-top:14px">Tell us what your Magento 2 store needs. We'll send matching developer profiles.</h2><p>A short discovery call with a certified Magento 2 lead, then profiles, rates and a start date. No slide deck.</p></div>
+    <div class="actions"><a class="btn btn-light" href="mailto:manish@bay20.com">Hire Magento 2 Developers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-outline-light" href="https://api.whatsapp.com/send?phone=+918800519180">WhatsApp us</a></div>
+  </div></div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="Bay20 Software"></a>
+        <p class="about">An eCommerce solution provider. We design, develop, deploy, maintain and market online stores for businesses large and small.</p>
+        <div class="badges"><img src="assets/badge-iso.png" alt="ISO 9001:2008 certified"><img src="assets/badge-nasscom.png" alt="NASSCOM member"></div>
+      </div>
+      <div>
+        <h4>Our works</h4>
+        <ul><li><a href="#">Ecommerce stores</a></li><li><a href="#">Design concepts</a></li><li><a href="#">Responsive design</a></li><li><a href="#">Case studies</a></li><li><a href="#">Our team</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#">About us</a></li><li><a href="#">SEO packages</a></li><li><a href="#ai">AI &amp; automation</a></li><li><a href="#">Hire developers</a></li><li><a href="#">Blog</a></li><li><a href="#">Deutsch (DE)</a></li></ul>
+      </div>
+      <div class="contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><b>India</b><a href="tel:+918800519180">+91-8800519180</a><a href="tel:+919582784309">+91-9582784309</a></li>
+          <li><b>USA</b><a href="tel:+15186181023">+1-518-618-1023</a></li>
+          <li><b>E-mail</b><a href="mailto:manish@bay20.com">manish@bay20.com</a><a href="mailto:wargis@bay20.com">wargis@bay20.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© <span id="year"></span> Bay20 Software Consultancy Services Pvt. Ltd. All rights reserved.</span>
+      <div class="socials" aria-label="Social links">
+        <a href="https://www.linkedin.com/company/bay20-software-services/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+        <a href="https://www.facebook.com/bay20softwareservices" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg></a>
+        <a href="https://twitter.com/Bay20software" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7.5 8.6L22 22h-6.8l-5-6.6L4.5 22h-3l8-9.2L2 2h6.9l4.5 6L18 2Zm-1.2 18h1.9L7.3 3.9H5.3L16.8 20Z"/></svg></a>
+        <a href="https://github.com/bay20soft" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCwuSUpgi5XzJrNloYcU9Upg" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2c-.2-1.3-1-2.1-2.3-2.3C17.6 5.5 12 5.5 12 5.5s-5.6 0-7.7.4C3 6.1 2.2 6.9 2 8.2 1.7 10 1.7 12 1.7 12s0 2 .3 3.8c.2 1.3 1 2.1 2.3 2.3 2.1.4 7.7.4 7.7.4s5.6 0 7.7-.4c1.3-.2 2.1-1 2.3-2.3.3-1.8.3-3.8.3-3.8s0-2-.3-3.8ZM10 15V9l5.2 3L10 15Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating actions -->
+<div class="float">
+  <button class="totop" id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a class="wa" href="https://api.whatsapp.com/send?phone=+918800519180&text=Hi,%20I%20contacted%20you%20through%20your%20website."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.6 1.1 2.8c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>Chat on WhatsApp</a>
+</div>
+
+<script>
+/* =========================================================
+   JS — header, mega menus, drawer, reveal, tabs, counters, marquee
+   ========================================================= */
+(function(){
+  const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+
+  /* Sticky header state + back-to-top */
+  const header=$('#header'), totop=$('#totop');
+  const onScroll=()=>{const y=window.scrollY; header.classList.toggle('scrolled',y>8); totop.classList.toggle('show',y>700);};
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  totop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  /* Mega menus (click to toggle, close on outside / Esc) */
+  const megaBtns=$$('.nav [data-mega]');
+  const closeMegas=()=>{$$('.mega.open').forEach(m=>m.classList.remove('open')); megaBtns.forEach(b=>b.setAttribute('aria-expanded','false'));};
+  megaBtns.forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      e.stopPropagation();
+      const target=$('#mega-'+btn.dataset.mega); const willOpen=!target.classList.contains('open');
+      closeMegas(); if(willOpen){target.classList.add('open'); btn.setAttribute('aria-expanded','true');}
+    });
+  });
+  document.addEventListener('click',e=>{ if(!e.target.closest('.mega')) closeMegas(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'){closeMegas(); closeDrawer();} });
+
+  /* Mobile drawer */
+  const drawer=$('#drawer'), burger=$('#burger');
+  const openDrawer=()=>{drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); burger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden';};
+  const closeDrawer=()=>{drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow='';};
+  burger.addEventListener('click',openDrawer);
+  $$('[data-close]',drawer).forEach(el=>el.addEventListener('click',closeDrawer));
+
+  /* Language toggle (visual only) */
+  $$('.lang button').forEach(b=>b.addEventListener('click',()=>{$$('.lang button').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true');}));
+
+  /* Scroll reveal */
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{rootMargin:'0px 0px -10% 0px',threshold:.08});
+  $$('.reveal').forEach(el=>io.observe(el));
+
+  /* Counters */
+  const ease=t=>1-Math.pow(1-t,3);
+  const runCounter=el=>{
+    const end=+el.dataset.count, suffix=el.dataset.suffix||'', dur=1400, start=performance.now();
+    const tick=now=>{const p=Math.min(1,(now-start)/dur); el.textContent=Math.round(end*ease(p))+(p===1?suffix:''); if(p<1) requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);
+  };
+  const cio=new IntersectionObserver(entries=>{entries.forEach(en=>{if(en.isIntersecting){runCounter(en.target); cio.unobserve(en.target);}});},{threshold:.6});
+  $$('[data-count]').forEach(el=>cio.observe(el));
+
+  /* Tabs */
+  const tabs=$$('.tab'), panels=$$('.panel');
+  const selectTab=tab=>{
+    tabs.forEach(t=>t.setAttribute('aria-selected',String(t===tab)));
+    panels.forEach(p=>p.classList.toggle('active',p.id==='panel-'+tab.dataset.tab));
+  };
+  tabs.forEach((tab,i)=>{
+    tab.addEventListener('click',()=>selectTab(tab));
+    tab.addEventListener('keydown',e=>{
+      if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault(); const n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length; tabs[n].focus(); selectTab(tabs[n]);}
+    });
+  });
+
+  /* Marquee: duplicate track content so the loop is seamless */
+  const track=$('#marquee-track'); if(track){ track.innerHTML+=track.innerHTML; }
+
+  /* Auto-scroll screenshots on hover (hero windows + project cards).
+     Distance = image height − viewport height; speed is constant px/s so long pages take longer. */
+  const SCROLL_PX_PER_S=140;
+  $$('img[data-autoscroll]').forEach(img=>{
+    const view=img.parentElement; const host=img.closest('.win,.proj')||view;
+    const run=()=>{const d=img.offsetHeight-view.clientHeight; if(d<=8) return; img.style.transition=`transform ${Math.max(2,d/SCROLL_PX_PER_S)}s linear`; img.style.transform=`translateY(${-d}px)`;};
+    const reset=()=>{img.style.transition='transform .9s cubic-bezier(.2,.7,.2,1)'; img.style.transform='translateY(0)';};
+    host.addEventListener('pointerenter',run); host.addEventListener('pointerleave',reset);
+    host.addEventListener('focusin',run); host.addEventListener('focusout',reset);
+  });
+
+  /* Hero windows: gentle parallax on pointer move (desktop only) */
+  const stage=$('.stage');
+  if(stage && matchMedia('(pointer:fine)').matches){
+    const wins=$$('.win',stage);
+    stage.addEventListener('pointermove',e=>{
+      const r=stage.getBoundingClientRect(); const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      wins.forEach((w,i)=>{const d=(i+1)*4; w.style.translate=`${x*d}px ${y*d}px`;});
+    });
+    stage.addEventListener('pointerleave',()=>wins.forEach(w=>w.style.translate=''));
+  }
+
+  /* AI chat demo: scripted conversations with sources, typewriter replies, pause/next/scenario pills */
+  const chatBox=$('#ai-msgs');
+  if(chatBox){
+    const tick='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m2 12 5 5L17 7M9 17l10-10"/></svg>';
+    const scripts=[
+      {lab:'Online store',m:[['u','Do you have the linen shirt in medium?'],['b','Yes, 4 left in medium in sand and navy. Want me to add one to your cart?','Source: live inventory'],['u','Navy please. When will it arrive?'],['b','Added. Orders before 2 pm ship today, so delivery is Thursday.','Source: shipping policy']]},
+      {lab:'Hotel booking',m:[['u','Is a late check-in possible on Friday?'],['b','Yes. Reception is open 24 hours, and the Garden Suite is free that night.','Source: booking calendar'],['u','Can you book it for two adults?'],['b','I can hold it for 20 minutes while a colleague confirms your details.','Handover: reservations team']]},
+      {lab:'B2B wholesale',m:[['u','What is the wholesale price for 500 units?'],['b','Tier 3 pricing applies: 18% below list. I have sent the quote to your email.','Source: price list · CRM'],['u','Payment terms?'],['b','Net 30 for approved accounts. Yours is approved, so you are all set.','Source: Salesforce account']]},
+    ];
+    const status=$('#ai-status'), lab=$('#ai-lab'), scn=$$('#ai-scn button'); const IDLE='Online · answers from approved data';
+    let cur=0, paused=false, timers=[], raf=null, gen=0;
+    const now=()=>{const d=new Date(); return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0');};
+    const clearTimers=()=>{timers.forEach(clearTimeout); timers=[]; if(raf) cancelAnimationFrame(raf);};
+    const wait=ms=>new Promise(r=>timers.push(setTimeout(r,ms)));
+    const bubble=(who)=>{const m=document.createElement('div'); m.className='cmsg '+who; const t=document.createElement('span'); t.className='txt'; m.appendChild(t); chatBox.appendChild(m); requestAnimationFrame(()=>m.classList.add('in')); return m;};
+    const finish=(m,who,src)=>{ if(src){const s=document.createElement('span'); s.className='src'; s.textContent=src; m.appendChild(s);} const ts=document.createElement('span'); ts.className='ts'; ts.innerHTML=now()+(who==='u'?tick:''); m.appendChild(ts); };
+    const typeInto=(m,text,g)=>new Promise(res=>{const t=$('.txt',m); const c=document.createElement('i'); c.className='cur'; m.appendChild(c); let i=0; const step=()=>{ if(g!==gen) return; if(paused){raf=requestAnimationFrame(step); return;} i=Math.min(text.length,i+1+(text.length>60?1:0)); t.textContent=text.slice(0,i); if(i<text.length){ timers.push(setTimeout(step,22)); } else { c.remove(); res(); } }; step();});
+    const run=async(i)=>{
+      clearTimers(); cur=i; const g=++gen;
+      scn.forEach((b,k)=>b.classList.toggle('on',k===i));
+      const old=[...chatBox.children]; old.forEach(m=>m.classList.remove('in')); await wait(350); if(g!==gen) return; old.forEach(m=>m.remove());
+      lab.textContent=`${scripts[i].lab} · Example ${i+1} of ${scripts.length}`;
+      for(const [who,text,src] of scripts[i].m){
+        while(paused){ await wait(200); if(g!==gen) return; }
+        if(who==='u'){ status.textContent='Reading…'; const m=bubble('u'); $('.txt',m).textContent=text; finish(m,'u'); await wait(1100); }
+        else { status.textContent='Replying…'; const m=bubble('b'); await wait(450); if(g!==gen) return; await typeInto(m,text,g); if(g!==gen) return; finish(m,'b',src); await wait(1300); }
+        if(g!==gen) return;
+      }
+      status.textContent=IDLE; await wait(3200); if(g!==gen) return;
+      run((cur+1)%scripts.length);
+    };
+    scn.forEach(b=>b.addEventListener('click',()=>{paused=false; run(+b.dataset.s);}));
+    $('#ai-next').addEventListener('click',()=>{paused=false; run((cur+1)%scripts.length);});
+    $('#ai-pause').addEventListener('click',e=>{paused=!paused; e.currentTarget.innerHTML=paused?'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5v14M15 5v14"/></svg>'; status.textContent=paused?'Paused':'Replying…';});
+    const aio=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){run(0); aio.disconnect();}}),{threshold:.3});
+    aio.observe(chatBox);
+  }
+
+  /* Footer padding follows the overlapping CTA box */
+  const ctaBox=$('.cta-band .box'), footer=$('.footer');
+  const fitFooter=()=>{ if(ctaBox&&footer) footer.style.paddingTop=(ctaBox.offsetHeight/2+64)+'px'; };
+  fitFooter(); window.addEventListener('resize',fitFooter); window.addEventListener('load',fitFooter);
+
+  /* Footer year */
+  $$('#faq-list details').forEach(d=>d.addEventListener('toggle',()=>{ if(d.open) $$('#faq-list details').forEach(o=>{ if(o!==d) o.open=false; }); }));
+
+  $('#year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
