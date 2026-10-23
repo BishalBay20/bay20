@@ -88,9 +88,10 @@ section{padding-block:clamp(72px,9vw,120px)}
 .header{position:sticky;top:0;z-index:50;background:rgba(247,247,245,.85);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
 .header.scrolled{border-color:var(--line);box-shadow:0 10px 30px -20px rgba(14,15,20,.25)}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-.brand img{height:40px;width:auto}
+.header .brand{flex:0 0 auto;display:inline-flex;align-items:center}
+.brand img{height:40px;width:auto;max-width:none}
 .nav{display:flex;gap:4px;align-items:center}
-.nav>a,.nav>button{padding:10px 14px;border-radius:999px;font-weight:500;font-size:14.5px;color:var(--ink);display:inline-flex;align-items:center;gap:6px;transition:background .2s}
+.nav>a,.nav>button{padding:10px 11px;border-radius:999px;font-weight:500;font-size:14.5px;color:var(--ink);display:inline-flex;align-items:center;gap:6px;transition:background .2s}
 .nav>a:hover,.nav>button:hover{background:var(--mist)}
 .nav>a.active{color:var(--crimson)}
 .nav svg{width:12px;height:12px;opacity:.6}
@@ -99,7 +100,7 @@ section{padding-block:clamp(72px,9vw,120px)}
 .burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
 .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:transform .25s}
 .burger span::before{top:-6px}.burger span::after{top:6px}
-@media (max-width:1080px){.nav{display:none}.mega{display:none}.burger{display:inline-flex}.header .cta .btn-ghost{display:none}}
+@media (max-width:1200px){.nav{display:none}.mega{display:none}.burger{display:inline-flex}.header .cta .btn-ghost{display:none}}
 @media (max-width:560px){.header .cta .btn-primary{display:none}}
 
 /* Mega menu */
@@ -112,6 +113,12 @@ section{padding-block:clamp(72px,9vw,120px)}
 .mega li a:hover{color:var(--crimson)}
 .mega .feature{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
 .mega .feature p{margin:0;color:#B9BDC7;font-size:14px}
+.nav>button.active{color:var(--crimson)}
+.mega li a em{font-style:normal;font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:999px;background:var(--mist);color:var(--slate);line-height:1}
+.mega li a em.red{background:var(--crimson-soft);color:var(--crimson-deep)}
+.nav>a,.nav>button{white-space:nowrap}
+.header .cta .btn-ghost{display:none}
+@media (max-width:1360px){.nav>a,.nav>button{padding:10px 9px;font-size:14px}.header .wrap{gap:16px}}
 
 /* Mobile drawer */
 .drawer{position:fixed;inset:0;z-index:80;visibility:hidden}
@@ -501,12 +508,14 @@ section{padding-block:clamp(72px,9vw,120px)}
 <!-- ===================== HEADER ===================== -->
 <header class="header" id="header">
   <div class="wrap">
-    <a class="brand" href="https://bishalbay20.github.io/bay20/" aria-label="Bay20 Software home"><img src="assets/logo.png" alt="Bay20 Software"></a>
+    <a class="brand" href="#top" aria-label="Bay20 Software home"><img src="assets/logo.png" alt="Bay20 Software"></a>
     <nav class="nav" aria-label="Primary">
-      <a href="https://bishalbay20.github.io/bay20/shopware.html">Shopware</a>
+      <a href="#projects">Projects</a>
       <a href="#services">SEO Packages</a>
       <button data-mega="capabilities" aria-expanded="false">Capabilities <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
       <a href="#capabilities">Magento</a>
+      <button data-mega="shopware" aria-expanded="false">Shopware <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button data-mega="ai" aria-expanded="false">AI Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
       <button data-mega="hire" aria-expanded="false">Hire Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
       <a href="#blog">Blog</a>
     </nav>
@@ -524,6 +533,24 @@ section{padding-block:clamp(72px,9vw,120px)}
       <div><h4>Magento</h4><ul><li><a href="#">Magento 2 Development</a></li><li><a href="#">Magento Cloud</a></li><li><a href="#">Custom Design</a></li><li><a href="#">Support &amp; Maintenance</a></li><li><a href="#">Migration M1 → M2</a></li><li><a href="#">Speed Optimization</a></li><li><a href="#">Security Patches</a></li></ul></div>
       <div><h4>CRM · CMS · Mobile</h4><ul><li><a href="#">Salesforce</a></li><li><a href="#">HubSpot</a></li><li><a href="#">WordPress / Typo3 / Drupal</a></li><li><a href="#">Android &amp; Flutter apps</a></li><li><a href="#">Shopify &amp; BigCommerce apps</a></li><li><a href="#">PWA development</a></li><li><a href="#ai">AI &amp; automation</a></li></ul></div>
       <div class="feature"><div><span class="pill ghost">Featured service</span><h3 style="font-size:20px;margin:12px 0 8px">Magento speed optimisation</h3><p>Measurable Core Web Vitals gains on Magento 2 stores, delivered as a fixed-scope package.</p></div><a class="btn btn-light" href="#">See packages</a></div>
+    </div>
+  </div>
+  <!-- Mega: Shopware -->
+  <div class="mega" id="mega-shopware">
+    <div class="wrap">
+      <div><h4>Shopware Extensions</h4><ul><li><a href="https://store.shopware.com/en/bay2058128349020m/bay20-promotion-message-on-product-page.html" target="_blank" rel="noopener">Promotion Message on Product Page</a></li><li><a href="https://store.shopware.com/en/bay2057437833857m/bay20-promotional-banners.html" target="_blank" rel="noopener">Promotional Banners</a></li><li><a href="https://store.shopware.com/en/bay2058899996465m/pseudo-price-custom-text.html" target="_blank" rel="noopener">Pseudo Price Custom Text</a></li><li><a href="https://store.shopware.com/en/bay2068879167998m/categories-on-the-detail-page.html" target="_blank" rel="noopener">Categories on the Detail Page</a></li><li><a href="https://store.shopware.com/en/bay2084648618379m/bay20-smart-variants.html" target="_blank" rel="noopener">Smart Variants</a></li></ul></div>
+      <div><h4>Cart, orders &amp; content</h4><ul><li><a href="https://store.shopware.com/en/bay2010534345347m/bay20-smart-cart-boost.html" target="_blank" rel="noopener">Smart Cart Boost <em class=red>AI</em></a></li><li><a href="https://store.shopware.com/en/bay2021912532320m/bay20-order-statustools.html" target="_blank" rel="noopener">Order StatusTools &amp; Kanban <em>New</em></a></li><li><a href="https://store.shopware.com/en/bay2063653764474m/bay20-customer-comment-in-invoice.html" target="_blank" rel="noopener">Customer Comment in Invoice</a></li><li><a href="https://store.shopware.com/en/bay2092134456437m/wordpress-blogs-for-shopware-by-bay20.html" target="_blank" rel="noopener">WordPress Blogs for Shopware</a></li></ul></div>
+      <div><h4>Shopware services</h4><ul><li><a href="shopware.html#services">Shopware 6 Development</a></li><li><a href="shopware.html#services">Custom Plugin Development</a></li><li><a href="shopware.html#integration">Migration to Shopware 6</a></li><li><a href="shopware.html#services">Support &amp; Maintenance</a></li><li><a href="shopware.html#contact">Hire Shopware 6 Developer</a></li></ul></div>
+      <div class="feature"><div><span class="pill ghost">Shopware Extension Partner</span><h3 style="font-size:20px;margin:12px 0 8px">9 extensions on the Shopware Store</h3><p>Built and maintained by our certified Shopware team. Compatible with Shopware 6.5 to 6.7, Community and Enterprise.</p></div><a class="btn btn-light" href="https://store.shopware.com/en/search?isManufacturerPage=true&amp;manufacturer=1607308e522ed84d5b660348f77f360a" target="_blank" rel="noopener">Browse all extensions</a></div>
+    </div>
+  </div>
+  <!-- Mega: AI Services -->
+  <div class="mega" id="mega-ai">
+    <div class="wrap">
+      <div><h4>AI agents &amp; automation</h4><ul><li><a href="#ai">AI chatbots &amp; customer assistants</a></li><li><a href="#ai">Back-office AI agents</a></li><li><a href="#ai">Workflow automation (Zapier · Make · n8n)</a></li><li><a href="#ai">Document intelligence &amp; extraction</a></li><li><a href="#ai">Knowledge assistants on your data</a></li></ul></div>
+      <div><h4>AI engineering</h4><ul><li><a href="#ai">LLM app development</a></li><li><a href="#ai">RAG &amp; semantic search</a></li><li><a href="#ai">Copilots for internal teams</a></li><li><a href="#ai">Evals, guardrails &amp; human review</a></li><li><a href="#ai">Vibe coding services</a></li></ul></div>
+      <div><h4>Commerce &amp; data AI</h4><ul><li><a href="#ai">Store AI integration (Magento · Shopware · Shopify)</a></li><li><a href="#ai">AI product content &amp; catalogue enrichment</a></li><li><a href="#ai">AI recommendations &amp; cross-sells</a></li><li><a href="#ai">AEO / GEO: get cited by AI</a></li><li><a href="#ai">Data &amp; analytics dashboards</a></li></ul></div>
+      <div class="feature"><div><span class="pill ghost">Production AI systems</span><h3 style="font-size:20px;margin:12px 0 8px">From pilot to production</h3><p>Amazon Bedrock, Azure OpenAI or Anthropic, with monitoring, evaluation, security and cost control built in. Humans stay in the loop.</p></div><a class="btn btn-light" href="#contact">Talk about an AI project</a></div>
     </div>
   </div>
   <!-- Mega: Hire -->
@@ -547,7 +574,10 @@ section{padding-block:clamp(72px,9vw,120px)}
       <a href="#services" data-close>SEO Packages</a>
       <a href="#capabilities" data-close>Capabilities</a>
       <div class="sub"><a href="#">Shopware</a><a href="#">Magento 2</a><a href="#">Shopify</a><a href="#">BigCommerce</a><a href="#">WooCommerce</a><a href="#">Salesforce · HubSpot</a></div>
-      <a href="#ai" data-close>AI &amp; Automation</a>
+      <a href="shopware.html" data-close>Shopware</a>
+      <div class="sub"><a href="https://store.shopware.com/en/bay2058128349020m/bay20-promotion-message-on-product-page.html" target="_blank" rel="noopener">Promotion Message on Product Page</a><a href="https://store.shopware.com/en/bay2057437833857m/bay20-promotional-banners.html" target="_blank" rel="noopener">Promotional Banners</a><a href="https://store.shopware.com/en/bay2058899996465m/pseudo-price-custom-text.html" target="_blank" rel="noopener">Pseudo Price Custom Text</a><a href="https://store.shopware.com/en/bay2068879167998m/categories-on-the-detail-page.html" target="_blank" rel="noopener">Categories on the Detail Page</a><a href="https://store.shopware.com/en/bay2084648618379m/bay20-smart-variants.html" target="_blank" rel="noopener">Smart Variants</a><a href="https://store.shopware.com/en/bay2010534345347m/bay20-smart-cart-boost.html" target="_blank" rel="noopener">Smart Cart Boost</a><a href="https://store.shopware.com/en/bay2021912532320m/bay20-order-statustools.html" target="_blank" rel="noopener">Order StatusTools &amp; Kanban</a><a href="https://store.shopware.com/en/bay2063653764474m/bay20-customer-comment-in-invoice.html" target="_blank" rel="noopener">Customer Comment in Invoice</a><a href="https://store.shopware.com/en/bay2092134456437m/wordpress-blogs-for-shopware-by-bay20.html" target="_blank" rel="noopener">WordPress Blogs for Shopware</a></div>
+      <a href="#ai" data-close>AI Services</a>
+      <div class="sub"><a href="#ai" data-close>AI chatbots &amp; agents</a><a href="#ai" data-close>Workflow automation</a><a href="#ai" data-close>LLM apps, RAG &amp; search</a><a href="#ai" data-close>Store AI integration</a><a href="#ai" data-close>Data &amp; analytics</a></div>
       <a href="#why" data-close>Hire Us</a>
       <a href="#blog" data-close>Blog</a>
       <a href="#contact" data-close>Contact</a>
